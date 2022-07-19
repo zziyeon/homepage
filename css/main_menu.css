@@ -206,14 +206,14 @@ section {
     justify-content: space-between;
 }
 
-.a-info > .a-grade .fa {
+/* .a-info > .a-grade .fa {
     font-size:12px;
-}
+} */
 
-.a-info > .a-grade .checked {
+/* .a-info > .a-grade .checked {
     color:orange;
 }
-
+ */
 
 /* .prev_btn .ico_btn{
     display: inline-block;
