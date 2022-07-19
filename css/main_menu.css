@@ -23,14 +23,14 @@ a{
     outline: none;
 }
 
-.container{
-    width:1440px;
+html{
+    width: 1220px;
     margin: 0 auto;
 }
 
 /*                    헤더                     */
 header{
-    width:100%;
+    width:80%;
     height:100px;
     display: flex;
     align-items: center;
@@ -79,7 +79,6 @@ header ul> li{
 }
 
 .gnb> li ul{display: none;}
-
 
 
 /* :hover -> 마우스 올렸을때 css관리 해줌
@@ -142,7 +141,7 @@ section {
 
 /*----------------------------*/
 .container>.section-title{
-    display: center;
+    text-align: center;
 }
 
 /*----------------------------*/
@@ -164,6 +163,7 @@ section {
     height:250px;
     background: #eee;
 }
+
 
 .a-image > img {
     width:100%;

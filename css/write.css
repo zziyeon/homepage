@@ -1,0 +1,43 @@
+@charset "UTF-8";
+html {
+    width: 1220px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header {
+    height: 150px;
+}
+section {
+    outline: 1px solid black;
+    height: 600px;
+    margin: 0px 400px;
+    padding: 0px 100px;
+}
+
+h2 {
+    text-align: center;
+    line-height: 4;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 10px;
+}
+
+button {
+    width: 80px;
+    height: 25px;
+}
+
+/* label {
+    width: 200px;
+    margin: 0px 10px
+}
+input {
+    width: 150px;
+    height: 20px;
+} */
