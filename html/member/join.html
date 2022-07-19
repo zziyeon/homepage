@@ -5,83 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/join_cus.css">
+    <!-- <script src="/js/join.js"></script> -->
+
 </head>
 <body>
-<!-- 헤더 -->
+    <div id="wrapper">
+        <!-- 헤더 -->
+        <header>
+            헤더
+        </header>
+        <!-- //헤더 -->
 
-<!-- 헤더 -->
-    <div id="sign_form">
-        <h2 class="sign_title" >회원가입</h2>
-        <p id="sign_state">
-            <input type="button" value="고객 회원" id="customer_state" name="user_state" checked>
-            <input type="button" value="점주 회원" id="owner_state" name="user_state"> 
-        </p>
-        <div id="sign_info">
-            <div>
-                <label for="l_id">아이디</label>
-                <input type="text" id="id" name="l_id" placeholder="영문, 숫자 조합 8~15자">
-                <button id="id_ch" >중복확인</button>
+        <!-- section -->
+        <div id="sign_form">
+            <h2 class="sign_title" >회원가입</h2>
+            <p id="sign_state">
+                <button>고객 회원</button>
+                <button>점주 회원</button>
+                <!-- <input type="button" value="고객 회원" id="customer_state" name="user_state" >
+                <input type="button" value="점주 회원" id="owner_state" name="user_state">  -->
+            </p>
+            <div id="sign_info">
+                <div>
+                    <label for="l_id">아이디</label>
+                    <input type="text" id="l_id" placeholder="영문, 숫자 조합 8~15자">
+                    <button id="id_ch" >중복확인</button>
+                </div>
+                <div>
+                    <label for="pwd">비밀번호</label>
+                    <input type="password" id="pwd" >
+                </div>
+                <div>
+                    <label for="pwdCh">비밀번호 확인</label>
+                    <input type="password" id="pwdCh" >
+                </div>
+                <div>
+                    <label for="pwd">이름</label>
+                    <input type="text" id="name"placeholder="이름을 입력하세요">
+                </div>
+                <div>
+                    <label for="nickChBtn">닉네임</label>
+                    <input type="text" id="nick">
+                    <button id="nickChBtn">중복확인</button>
+                </div>
+                <div>
+                    <label for="email">이메일</label>
+                    <input id="email" type="email" placeholder="gildong@example.com">
+                    <button>인증번호 발송</button>
+                </div>
+                <div>
+                    <label for="">인증번호</label>
+                    <input type="text" placeholder="인증번호를 입력해주세요">
+                </div>
+                <div>
+                    <label for="phone">주소</label>
+                    <input id="phone" type="text" placeholder="000-0000-0000" maxlength="13">
+                    <button>주소 검색</button>
+                </div>
+                <p id="msg"></p>
             </div>
-            <div>
-                <label for="pwd">비밀번호</label>
-                <input type="password" id="pwd" name="pwd">
-            </div>
-            <div>
-                <label for="pwd">이름</label>
-                <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
-            </div>
-            <div>
-                <label for="">닉네임</label>
-                <input type="text" id="nick">
-            </div>
-            <div>
-                <label for="email">이메일</label>
-                <input id="email" name="email" type="email" placeholder="gildong@example.com">
-            </div>
-            <div>
-                <label for="phone">휴대폰</label>
-                <input id="phone" name="phone" type="tel" placeholder="000-0000-0000" maxlength="13">
-                
-            </div>
-            <p id="msg"></p>
-            <div>
-                <button id="signBtn">회원가입</button>
-            </div>
+
+            <div class="sign-Ch">
+                <div>
+                    <label for="">이용약관 동의</label>
+                    <input type="checkbox" name="check"> 이용 약관 동의 <br>
+                    <input type="checkbox" name="check"> 개인정보 수집 동의 <br>
+                    <input type="checkbox" name="check"> 개인정보 이용 동의
+                </div>
+                <div>
+                    <button id="signBtn" type="submit">회원가입</button>
+                </div>
+            </div>    
+            
         </div>
+        <!-- //section -->
+
+            <script>
+                const $signBtn=document.getElementById($signBtn);
+                $signBtn.addEventListener(
+                    'click',function(){
+                        const $id=document.getElementById('id');
+                        const $pwd=document.getElementById('pwd');
+                        const $email=document.getElementById('email');
+                        const $phone=document.getElementById('phone');                
+                        const $msg=document.getElementById('msg');
+
+                        if($id.value.trim().length==0){
+                            alerMsg($msg,'아이디를 입력하세요')
+                        }
+
+                        if($pwd.value.trim().length==0){
+                            alertMsg($msg,'비밀번호를 입력하세요')
+                            return;
+                        }
+                        else if($pwd.value.trim().length<8 || $pwd.value.trim().length>15){
+                            alertMsg($msg,'비밀번호는 8~15자 입력하세요');
+                            return;
+                        }
+
+                    }
+                )
+                function alertMsg(tag,msg){
+                    tag.textContent=msg;
+                    tag.style.color='red';
+                    tag.style.fontweight='bold';
+                    tag.style.fontSize='0.8em';
+                }
+
+            </script>
+        <footer><footer></footer></footer>    
     </div>
-    <script>
-        const $signBtn=document.getElementById($signBtn);
-        $signBtn.addEventListener(
-            'click',function(){
-                const $id=document.getElementById('id');
-                const $pwd=document.getElementById('pwd');
-                const $email=document.getElementById('email');
-                const $phone=document.getElementById('phone');                
-                const $msg=document.getElementById('msg');
-
-                if($id.value.trim().length==0){
-                    alerMsg($msg,'아이디를 입력하세요')
-                }
-
-                if($pwd.value.trim().length==0){
-                    alertMsg($msg,'비밀번호를 입력하세요')
-                    return;
-                }
-                else if($pwd.value.trim().length<8 || $pwd.value.trim().length>15){
-                    alertMsg($msg,'비밀번호는 8~15자 입력하세요');
-                    return;
-                }
-
-            }
-        )
-        function alertMsg(tag,msg){
-            tag.textContent=msg;
-            tag.style.color='red';
-            tag.style.fontweight='bold';
-            tag.style.fontSize='0.8em';
-        }
-
-    </script>
-    
 </body>
 </html>
