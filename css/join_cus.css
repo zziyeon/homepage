@@ -1,15 +1,21 @@
 @charset "UTF-8";
 
-
-
-
+#wrapper section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #wrapper #sign_form {
     /* display: flex; */
     width: 500px;
     text-align: center;
 }
-/* 
-#wrapper #sign_form #sign_state #customer_state,#owner_state {
+
+#sign_info>div {
+    margin-top: 10px;
+}
+
+/* #wrapper #sign_form #sign_state #customer_state,#owner_state {
     background-color: rgb(172, 172, 172);
     border: 0;
 }
