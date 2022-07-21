@@ -1,43 +1,75 @@
 @charset "UTF-8";
-html {
-    width: 1220px;
-}
+
 *{
+    /* outline: 1px solid red; */
     margin: 0;
     padding: 0;
 }
+
 header {
     height: 150px;
 }
-section {
-    outline: 1px solid black;
-    height: 600px;
-    margin: 0px 400px;
-    padding: 0px 100px;
-}
-
 h2 {
     text-align: center;
-    line-height: 4;
+    line-height: 3;
+}
+section {
+    outline: 1px solid black;
+    width: 610px;
+    height: 500px;
+    margin: 0px 400px;
+    padding: 50px 30px 20px 30px;
+}
+section .content__title > input {
+    width: 483px;
 }
 
 .content {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-column-gap: 40px;
-    grid-row-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 610px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 110px;
+}
+input {
+    display: inline-block;
+    width: 160px;
+    height: 25px;
+    margin: 6px 6px;
+}
+select {
+    height: 24px;
+    width: 153px;
+    margin: 6px 6px;
+}
+
+.write-btn {
+    display: flex;
+    justify-content: flex-end;
 }
 
 button {
-    width: 80px;
-    height: 25px;
+    width: 100px;
+    height: 30px;
+    background-color: #f1c40f;
+    border: 0;
+    margin: 10px;
+}
+button:hover {
+    cursor: pointer;
+    outline: 1px solid black;
+    border: 1px;
 }
 
-/* label {
-    width: 200px;
-    margin: 0px 10px
+.write-btn #tempSave {
+    background-color: #e0e0e0;
 }
-input {
-    width: 150px;
-    height: 20px;
-} */
+
+footer {
+    height: 150px;
+    background-color: grey;
+}

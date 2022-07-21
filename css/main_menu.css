@@ -94,7 +94,7 @@ header ul> li{
 /* visual*/
 #visual{
     /* liner-gradient: 지정된 색사이를 일정한 간격으로 변화시키는 색으로 채워주는 도구*/
-    background-image:  url(/image/home.jpg); /*이미지를 배경으로 설정하는 값*/
+    background-image:  url(/image/배너.jpg); /*이미지를 배경으로 설정하는 값*/
 	/* background-color: rgba(234, 183, 254, 0.571); */
     background-size: cover;
 	background-position: 0% 20%;

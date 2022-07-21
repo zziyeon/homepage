@@ -10,15 +10,17 @@
 </head>
 <body>
     <header>header</header>
+    <h2>판매글 작성</h2>
     <section>
-        <h2>판매글 작성</h2>
-        <div class="content">       
+        <div class="content__title">
             <label for="title">글제목</label><input type="text" id="title">
+        </div>
+        <div class="content">       
             <label for="prdName">제품명</label><input type="text" id="prdName">
-            <label for="">마감시간</label><input type="time">
-            <label for="">업종 </label>
+            <label for="deadline">마감시간</label><input type="time">
+            <label for="salType">업종 </label>
             <select name="type of business" id="tob">
-                <option value="" selected disabled>업종선택</option>
+                <option value="tob" selected disabled>업종선택</option>
                 <option value="한식">한식</option>
                 <option value="중식">중식</option>
                 <option value="일식">일식</option>
@@ -28,9 +30,9 @@
                 <option value="도시락">도시락</option>
                 <option value="카페/디저트">카페/디저트</option>
             </select>
-            <label for="">정상가</label><input type="text">
-            <label for="">할인가</label><input type="text">
-            <label for="">수량</label><input type="number">
+            <label for="amount">수량</label><input type="number" min="0">
+            <label for="originalPrice">정상가</label><input type="text">
+            <label for="salePice">할인가</label><input type="text">        
             <label for="">결제 가능 방식</label>
             <select name="" id="">
                 <option value="선결제후결제">선결제 & 후결제</option>
@@ -38,15 +40,17 @@
                 <option value="후결제">후결제</option>
             </select>
             <label for="">첨부파일</label><input type="file">
-            상세설명 <textarea name="" id="" cols="30" rows="10" ></textarea>
-
-            <button>임시 저장</button>
-            <input type="submit" value="작성 완료">
+            상세설명 <textarea name="" id="" rows="10" ></textarea>
+        </div>
+        <div class="write-btn">
+            <button id="tempSave">임시 저장</button>
+            <button id="save" type="submit">작성 완료</button>
         </div>
 
 
     </section>
     <footer>footer</footer>
     
+    <img src="/image/kakao_login_Btn.png" alt="">
 </body>
 </html>
