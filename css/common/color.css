@@ -2,5 +2,8 @@
 
 :root {
     --main-color-yel : #f1c40f;
-    --main-color-gre : #e0e0e0;
+    --mainBtn-color-gre : #e0e0e0;
+    --main-color-gre : #eee;
+    --main-color-bla : #000;
+    --color-red: rgb(219, 36, 36);
 }

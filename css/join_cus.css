@@ -1,9 +1,17 @@
 @charset "UTF-8";
 
+h2 {
+    font-size: 45;
+}
 #wrapper section {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
 }
 #wrapper #sign_form {
     /* display: flex; */
@@ -14,6 +22,24 @@
 #sign_info>div {
     margin-top: 10px;
 }
+
+label {
+    display: inline-block;
+    width: 110px;
+}
+input {
+    display: inline-block;
+    width: 160px;
+    height: 25px;
+    margin: 6px 6px;
+}
+
+button {
+    height: 31px;
+    margin: 6px
+}
+
+
 
 /* #wrapper #sign_form #sign_state #customer_state,#owner_state {
     background-color: rgb(172, 172, 172);

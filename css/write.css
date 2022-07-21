@@ -54,7 +54,11 @@ select {
 
 button {
     width: 100px;
-    height: 30px;
+    height: 35px;
+    font-size: 17px;
+    border-radius: 8px;
+
+    /* outline: 1px solid black; */
     background-color: #f1c40f;
     border: 0;
     margin: 10px;
