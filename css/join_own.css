@@ -10,3 +10,7 @@ table {
     border-color: inherit;
     border-top: 1px solid grey;
 }
+
+.ownBtn {
+    background-color: yellow;
+}

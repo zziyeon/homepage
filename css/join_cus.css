@@ -1,52 +1,16 @@
 @charset "UTF-8";
 
-h2 {
-    font-size: 45;
+h2{
+    text-align: center;
 }
-#wrapper section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-tbody {
+table {
+    width: 100%;
     display: table-row-group;
     vertical-align: middle;
     border-color: inherit;
-}
-#wrapper #sign_form {
-    /* display: flex; */
-    width: 500px;
-    text-align: center;
+    border-top: 1px solid grey;
 }
 
-#sign_info>div {
-    margin-top: 10px;
+.cusBtn {
+    background-color: yellow;
 }
-
-label {
-    display: inline-block;
-    width: 110px;
-}
-input {
-    display: inline-block;
-    width: 160px;
-    height: 25px;
-    margin: 6px 6px;
-}
-
-button {
-    height: 31px;
-    margin: 6px
-}
-
-
-
-/* #wrapper #sign_form #sign_state #customer_state,#owner_state {
-    background-color: rgb(172, 172, 172);
-    border: 0;
-}
-
-#wrapper #sign_form #sign_state #customer_state,#owner_state:active {
-    background-color: rgb(197, 49, 49);
-    border: 0;
-} */

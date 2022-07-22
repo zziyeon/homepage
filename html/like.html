@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좋아요</title>
+    <style>
+        li {
+            list-style: none;
+        }
+        i {
+            color: black;
+        }
+        .active {
+            color: red;
+        }
+        
+
+    </style>
+    <script src="https://kit.fontawesome.com/132ba309f6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <a href="#" id="heart"><i class="fa-solid fa-heart"></i></a>
+    <a href="#" id="heart"><i class="fa-solid fa-heart"></i></a>
+    <a href="#" id="heart"><i class="fa-solid fa-heart"></i></a>
+    <a href="#" id="heart"><i class="fa-solid fa-heart"></i></a>
+    
+
+    <script>
+        const $heart = document.getElementById('heart');
+        $heart.addEventListener('click',heart);
+            
+        function heart(e){
+            console.log('하트 클릭됨!');
+            e.target.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
