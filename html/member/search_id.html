@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인 | GREAT</title>
+    <title>아이디 찾기 | GREAT</title>
     <link rel="stylesheet" href="/css/common/common.css">
-    <link rel="stylesheet" href="/css/member/login.css">
+    <link rel="stylesheet" href="/css/member/search_info.css">
 
     <script src="https://kit.fontawesome.com/132ba309f6.js" crossorigin="anonymous"></script>
 </head>
@@ -61,25 +61,23 @@
 
         <!-- main -->
         <main class="main container">
-            <h2>로그인 </h2>
+            <h2>아이디 찾기</h2>
 
-            <table class="login-tb">
+            <table class="search-tb">
                 <tr>
-                    <td class="login-tb__id"><i class="fa-solid fa-user"></i></td>
-                    <td><input type="text" id="loginId" placeholder="아이디를 입력하세요"></td>
+                    <td class="search-tb__name"><label for="search-id__name"></label> 이름</label></td>
+                    <td><input type="text" id="search-id__name" placeholder="이름을 입력하세요"></td>
                 </tr>
                 <tr>
-                    <td class="login-tb__pwd"><i class="fa-solid fa-key"></i></td>
-                    <td><input type="password" id="loginPwd" placeholder="비밀번호를 입력하세요"></td>
+                    <td class="search-tb__email"><label for="search-id__email">이메일</label> </td>
+                    <td><input type="email" id="search-id__email" placeholder="이메일을 입력하세요"></td>
+                    <td><button>인증</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="search" type="submit">찾기</button></td>
                 </tr>
             </table>
-            <p id="msg"></p>
-            <p><a href="/html/member/search_id.html" title="아이디 찾기">아이디 찾기</a> |
-                <a href="/html/member/search_pwd.html" title="비밀번호 찾기">비밀번호 찾기</a> |
-                <a href="/html/member/join_cus.html" title="회원가입">회원가입</a>
-            </p>
-            <button id="loginBtn">로그인</button><br>
-            <img src="/img/kakao_login_Btn.png" alt="">
         </main>
         <!-- //main -->
 
@@ -89,8 +87,6 @@
         </footer>
         <!-- //footer -->
     </div>
-
-    <script src="/js/login.js"></script>
 </body>
 
 </html>
