@@ -23,22 +23,26 @@ label {
     display: inline-block;
     width: 110px;
 }
+td {
+    padding: 6px;
+}
 input {
     display: inline-block;
     width: 160px;
     height: 25px;
-    margin: 6px 6px;
 }
-/* .main > .write_tb > .title {
-    width: 300px;
-    height: 25px;
-    background-color: #f1c40f;
-} */
+#title {
+    width: 100%;
+}
 
 select {
     height: 24px;
     width: 153px;
     margin: 6px 6px;
+}
+textarea {
+    width:100%;
+    resize: none;
 }
 
 .write-btn {
@@ -47,9 +51,9 @@ select {
 }
 
 button {
-    width: 100px;
-    height: 35px;
-    font-size: 17px;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
     border-radius: 8px;
 
     /* outline: 1px solid black; */

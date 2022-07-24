@@ -22,19 +22,49 @@
 </head>
 <body>
     <a href="#" id="heart"><i class="fa-solid fa-heart"></i></a>
-    <a href="#" id="heart"><i class="fa-solid fa-heart"></i></a>
-    <a href="#" id="heart"><i class="fa-solid fa-heart"></i></a>
-    <a href="#" id="heart"><i class="fa-solid fa-heart"></i></a>
+    <a href="#" id="heart1"><i class="fa-solid fa-heart"></i></a>
+    <a href="#" id="heart2"><i class="fa-solid fa-heart"></i></a>
+    <a href="#" id="heart3"><i class="fa-solid fa-heart"></i></a>
     
 
     <script>
-        const $heart = document.getElementById('heart');
-        $heart.addEventListener('click',heart);
-            
-        function heart(e){
+        // const $heart = document.getElementById('heart');
+        // const $heart1 = document.getElementById('heart1');
+        // const $heart2 = document.getElementById('heart2');
+        // const $heart3 = document.getElementById('heart3');
+
+        // $heart.addEventListener('click', heart);
+        // $heart1.addEventListener('click', heart);
+        // $heart2.addEventListener('click', heart);
+        // $heart3.addEventListener('click', heart);
+        
+        // // mouse click event
+        // function heart(e){
+        //     console.log('하트 클릭됨!');
+        //     e.target.classList.toggle('active');
+        // }
+        
+        // document.getElementById('heart').addEventListener('click', heart);
+        // document.getElementById('heart1').addEventListener('click', heart);
+        // document.getElementById('heart2').addEventListener('click', heart);
+        // document.getElementById('heart3').addEventListener('click', heart);
+
+        // // mouse click event
+        // function heart(e){
+        //     console.log('하트 클릭됨!');
+        //     e.target.classList.toggle('active');
+        // }
+
+
+        for(i;i<l;i++) {
+            document.getElementById('heart'+i).addEventListener('click',heart);
+        }
+                // mouse click event
+                function heart(e){
             console.log('하트 클릭됨!');
             e.target.classList.toggle('active');
         }
+
     </script>
 </body>
 </html>

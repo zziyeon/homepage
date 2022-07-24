@@ -5,7 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/common/common.css">
+  <link rel="stylesheet" href="/css/main.css">
   <script src="https://kit.fontawesome.com/038578f405.js" crossorigin="anonymous"></script>
+
   <title>GREAT</title>
 </head>
 <body>
@@ -57,7 +59,27 @@
 
     <!-- figure -->
     <figure class="figure container">
-      <img src="./img/banner2.jpg" alt="" class="content">
+      <div class="slideshow-container">
+        <div class="banner fade">
+          <img src="https://cdn.pixabay.com/photo/2022/04/19/09/08/flowers-7142409__480.jpg" alt="">
+        </div>
+        <div class="banner fade">
+          <img class="ss" src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__340.jpg" alt="">
+        </div>
+        <div class="banner fade">
+          <img src="https://cdn.pixabay.com/photo/2018/08/06/22/55/sun-3588618__340.jpg" alt="">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <br>
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
     </figure>
     <!-- //figure -->
 
@@ -171,5 +193,6 @@
     <!-- //footer -->
     
   </div>
+  <script src="/js/main.js"></script>
 </body>
 </html>
