@@ -2,6 +2,13 @@
 
 /* * { outline: 1px solid blueviolet;} */
 
+#star {
+    color: rgb(0, 0, 0);
+}
+.active {
+    color: rgb(255, 203, 30);
+}
+
 h2 {
     text-align: center;
 }
@@ -17,13 +24,24 @@ h2 {
 
 .profile > .profile-box {
     display: flex;
-
     padding: 20px;
     margin-bottom: 50px;
 }
 
+.profile > .profile-box >.photo {
+    display: block;
+    align-items: center;
+}
+
 .profile > .profile-box > .profile-info > table > tbody > tr > th {
-    padding-right: 20px;
+    padding-right: 10px;
+    /* font: bold; */
+    text-align: right;
+    border-right: 1px solid grey;
+}
+
+.profile > .profile-box > .profile-info > table > tbody > tr > td {
+    padding-left: 10px;
 }
 
 .tabs {

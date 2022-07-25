@@ -10,6 +10,11 @@
 
 
     <script src="https://kit.fontawesome.com/132ba309f6.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="/image/icon.svg">
+
+    <style>
+
+    </style>
 </head>
 <body>
     <div class="wrapper">
@@ -78,15 +83,12 @@
                     <div class="photo">
                         <img src="https://forum-creallo.s3.dualstack.ap-northeast-2.amazonaws.com/original/1X/5e0d906585d6dbbf7f3c9997484eee594bd01da1.jpeg" alt="">
                         <br><span>어피치</span>
-                        <i class="fa-solid fa-star"></i>
+                        <a href="#" id="star"><i class="fa-solid fa-star"></i></a>
+                        
                     </div>
                     <div class="profile-info">
                         <table>
                             <tbody>
-                                <tr>
-                                    <th>회원 유형</th>
-                                    <td>점주</td>
-                                </tr>
                                 <tr>
                                     <th>업종</th>
                                     <td>한식</td>
@@ -106,6 +108,7 @@
                                 <tr>
                                     <th>위치</th>
                                     <td>울산광역시 남구 무거2길 54 2층</td>
+                                    <!-- 글자 클릭하면 딱 지도로 가면 -->
                                 </tr>
                                 <tr>
                                     <th>영업시간</th>
@@ -113,11 +116,11 @@
                                 </tr>
                                 <tr>
                                     <th>평점</th>
-                                    <td>(4.6)</td>
+                                    <td><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>(4.0)</td>
                                 </tr>
                                 <tr>
                                     <th>SNS</th>
-                                    <td>https://www.instagram.com/morer</td>
+                                    <td><a href=" https://www.instagram.com/bakebakkkkk"> https://www.instagram.com/bakebakkkkk</a></td>
                                 </tr>
 
                             </tbody>
@@ -165,19 +168,27 @@
     </div>
 
     <script>
-        $(document).ready(function(){
+    //     $(document).ready(function(){
 	
-	$('ul.tabs li').click(function(){
-		var tab_id = $(this).attr('data-tab');
+    //     $('ul.tabs li').click(function(){
+    //         var tab_id = $(this).attr('data-tab');
 
-		$('ul.tabs li').removeClass('current');
-		$('.tab-content').removeClass('current');
+    //         $('ul.tabs li').removeClass('current');
+    //         $('.tab-content').removeClass('current');
 
-		$(this).addClass('current');
-		$("#"+tab_id).addClass('current');
-	})
+    //         $(this).addClass('current');
+    //         $("#"+tab_id).addClass('current');
+    //     });
 
-})
+    // });
+
+    document.getElementById('star').addEventListener('click', star);
+    function star(e){
+            console.log('별 클릭됨!');
+            e.target.classList.toggle('active');
+    }
+        
+
     </script>
 
 </body>

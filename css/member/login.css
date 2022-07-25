@@ -7,7 +7,10 @@
 h2 {
     text-align: center;
 }
-
+table {
+    
+}
 .main > .login-tb tr >.login-tb__id, .login-tb__pwd{
     font-size: 30px;
 }
+

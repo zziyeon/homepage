@@ -1,9 +1,9 @@
 @charset "utf-8";
 @import url(color.css);
 
-/* * {
+* {
   outline : 1px solid green;
-} */
+}
 
 /* 비율 */
 .wrapper {
@@ -13,8 +13,9 @@
   width: 100%;
 }
 
-.wrapper > .container > .content {
+.wrapper > .container >.content {
   width: 70vw;
+  min-width: 800px;
 }
 
 /* header */
@@ -148,6 +149,8 @@
 .wrapper > .main {
   display:flex;
   flex-direction: column;
+  justify-content: center;
+  margin: 0px 500px;
   margin-bottom:25px;
 }
 
@@ -156,19 +159,21 @@
   font-size: 20px;
   font-weight: bold;
   margin : 20px 0px;
+  width: 100%;
 }
 
 .wrapper > .main > .items {
   display : flex;
   flex-wrap: wrap;
   justify-content: left;
+  width: 1700px;
 }
 
 .wrapper > .main > .items > .item {
   display : flex;
   flex-direction: column;
-  width: 22%;
-  margin : 15px 15px;
+  width: 350px;
+  margin : 20px;
   overflow: hidden;
   border-radius: 8px;
   font-size: 16px;
@@ -177,7 +182,7 @@
 .wrapper > .main > .items > .item:hover {
   display : flex;
   flex-direction: column;
-  width: 22%;
+  width: 350px;
   margin : 10px 15px;
   overflow: hidden;
   border-radius: 8px;            
