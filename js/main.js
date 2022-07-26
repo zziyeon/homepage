@@ -25,3 +25,11 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 6000);
 }
+
+document.getElementById('heart').addEventListener('click', heart);
+
+// mouse click event
+function heart(e){
+console.log('하트 클릭됨!');
+e.target.classList.toggle('active');
+}

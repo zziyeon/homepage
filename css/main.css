@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+.active {   
+  color: red;
+}
 
 .wrapper > .figure > .slideshow-container > .banner {
     display: none;
