@@ -79,28 +79,30 @@
   justify-content: space-between;
   font-weight: bold;
 }
-
 .wrapper > .header > .bottom-menu > .category > ul > li {
   float:left;
   width: 140px;
   height: 35px;
   position: relative;
+  
 }
 
 .wrapper > .header > .bottom-menu > .category > ul > li > ul {
   width: 120px;
-  display: none;
+  display: block;
   position : absolute;
   top : 34px;
   font-size: 14px;
   border:1px solid #eee;
   background-color: white;            
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  z-index: 4;
 }
 
 .wrapper > .header > .bottom-menu > .category > ul > li:hover > ul {
   display:block;
   z-index: 4;
+  transition: all 3s;
 }
 
 .wrapper > .header > .bottom-menu > .category > ul > li > ul > li  > a{
@@ -233,6 +235,8 @@
   width: 100%;
 }
 
+
+
 .wrapper > .main > .items {
   display : flex;
   flex-wrap: wrap;
@@ -248,6 +252,7 @@
   overflow: hidden;
   border-radius: 8px;
   font-size: 16px;
+  
 }
 
 .wrapper > .main > .items > .item:hover {
