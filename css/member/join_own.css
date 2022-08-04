@@ -12,3 +12,7 @@ h2{
 .ownBtn {
     background-color: yellow;
 }
+
+#storeIntroduce {
+    resize: none;
+}

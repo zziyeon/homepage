@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수정버튼 만드마 + 추가</title>
+    <style>
+        /* * {outline:1px solid red;} */
+
+        ul {
+            margin: 0;
+            padding: 0
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        #container .wrap {
+            display: flex;
+            align-items: stretch;
+        }
+
+        #container .wrap .title {
+            align-self: center;
+            width: 80px;
+        }
+
+        #container .wrap .btn {
+            width: 60px;
+            margin-left: 5px;
+        }
+
+        #container .comment__list .comment__item-wrap {
+            display: flex;
+        }
+
+        #container .comment__list .comment__item-wrap .comment__item {
+            width: 200px;
+        }
+
+        #container .comment__list .comment__item-wrap .btn.btn_del {
+            width: 50px;
+        }
+    </style>
+    <script src="/dom/create_elememt.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div class="wrap">
+            <label for="" class="title">댓글작성 </label>
+            <textarea class="comment" name="" id="" cols="30" rows="3" placeholder="댓글입력(300자 미만)"></textarea>
+            <button class="btn btn__write">등록</button>
+        </div>
+        <div class="comment__list">
+            <ul class="comments">
+                <!-- <div class="comment__item-wrap">
+                    <li class="comment__item">댓글1</li>
+                    <button class="btn btn__del">삭제</button>
+                    <button class="btn btn__modify">수정</button>
+                </div>
+                <div class="comment__item-wrap">
+                    <li class="comment__item">댓글2</li>
+                    <button class="btn btn__del">삭제</button>
+                    <button class="btn btn__modify">수정</button>
+                </div>
+                <div class="comment__item-wrap">
+                    <li class="comment__item">댓글3</li>
+                    <button class="btn btn__del">삭제</button>
+                    <button class="btn btn__modify">수정</button>
+                </div> -->
+            </ul>
+        </div>
+    </div>
+    <script>
+        const add_h = e => {
+            const $comment = document.querySelector('.comment');
+            const comment = $comment.value.trim();
+            
+            if (comment.length) {
+                //1) li요소 생성
+                const $div = makeElements('div', { class: 'comment__item-wrap' },
+                    makeElements('li', { class: 'comment__item' }, comment),
+                    makeElements('button', { class: 'btn btn__modify' }, '수정'),
+                    makeElements('button', { class: 'btn btn__del' }, '삭제')
+                );
+
+                //2) ul 요소의 자식요소로 추가
+                const $comments = document.querySelector('.comment__list>.comments');
+                $comments.appendChild($div);
+                
+                //3) textarea.value 초기화
+                $comment.value = '';
+                
+                //4) button에 이벤트 등록
+                //4-1)삭제버튼
+                $div.querySelector('.btn.btn__del').addEventListener('click', e => {
+                    const $child = e.target.closest('.comment__item-wrap');
+                    $comments.removeChild($child);
+                });
+
+                //4-2)수정버튼
+                $div.querySelector('.btn.btn__modify').addEventListener('click', function(ele) {
+                    //수정창+확인버튼+취소버튼 생성
+                    const $change = makeElements('div', { class: 'comment_item--modify' },
+                    makeElements('input', { type: 'text' }),
+                    makeElements('button', { class: 'btn btn__check' }, '확인'),
+                    makeElements('button', { class: 'btn btn__cancel' }, '취소')
+                    )
+                    $div.appendChild($change);
+
+                    //수정버튼 이벤트 제거
+                    $div.querySelector('.btn.btn__modify').removeEventListener('click',arguments.callee);
+                    
+                    //수정_확인 버튼
+                    $change.querySelector('.btn.btn__check').addEventListener('click', e => {
+                        e.target.closest('.comment_item--modify').previousElementSibling.previousElementSibling.previousElementSibling.textContent = e.target.previousElementSibling.value;
+                                                
+                        $div.removeChild($change);
+                        //수정버튼 이벤트 추가
+                        $div.querySelector('.btn.btn__modify').addEventListener('click',arguments.callee);
+                    });
+                    
+                    //수정_취소 버튼
+                    $change.querySelector('.btn.btn__cancel').addEventListener('click', e=>{
+                        $div.removeChild($change);
+                        //수정버튼 이벤트 추가
+                        $div.querySelector('.btn.btn__modify').addEventListener('click',arguments.callee);
+                    });                
+                });
+
+            } else {
+                alert('댓글 입력바랍니다.');
+                $comment.focus();
+            }
+        };
+        document.querySelector('.btn.btn__write').addEventListener('click', add_h);
+    </script>
+</body>
+
+</html>
