@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+* {
+    /* outline: 1px solid gray; */
+}
+
+.main {
+    display: flex;
+}
+.main-side-left {
+    flex: 1;
+    border-right: 1px solid rgb(104, 101, 101);
+    margin-right: 20px;
+}
+.main-side-right {
+    flex: 5;
+}
+.main-title {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.bar {
+    display: flex;
+    width: 4px;
+    height: 36px;
+    /* color: yellow; */
+    background-color: var(--main-color-yel);
+    margin-right: 5px;
+}
+
+/* 주문 기간, 주문 상태 드롭다운 선택 */
+.order-choice {
+    display: flex;
+    width: 100%;
+    height: 60px;
+}
+
+.order-choice>.drop__period,
+.drop__status {
+    width: 170px;
+    margin: 10px;
+}
+
+.order-choice select {
+    width: 100%;
+    height: 100%;
+}
+
+/*  주문 리스트 */
+.ordered-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.p_content {
+    margin: 5px 0;
+}
+
+.ordered-list>.product {
+    width: 352px;
+    padding: 20px;
+    outline: 1.5px solid black;
+    border-radius: 8px;
+}
+
+.p_status select {
+    width: 100%;
+    height: 33px;
+}

@@ -1,7 +1,9 @@
 @charset "UTF-8";
+
 * {
     outline: 1px solid rosybrown;
 }
+
 /* article */
 /* article {
     display: flex;
@@ -23,7 +25,7 @@
 .product-img {
     width: 430px;
     height: 552px;
-    background: url("https://cdn.pixabay.com/photo/2016/04/14/17/01/soup-1329266__340.jpg" ) 50% 0%;
+    background: url("https://cdn.pixabay.com/photo/2016/04/14/17/01/soup-1329266__340.jpg") 50% 0%;
     object-fit: cover;
 }
 
@@ -47,7 +49,7 @@ dl {
     margin-inline-end: 0px;
 }
 
-dl >dt {
+dl>dt {
     position: relative;
     top: 1px;
     width: 128px;
@@ -55,9 +57,9 @@ dl >dt {
     line-height: 19px;
 }
 
-.product_buy > .buy_btn {
+.product_buy>.buy_btn {
     width: 432px;
-    height: 56px;
+    height: 45px;
     background-color: var(--main-color-yel);
     border: 0;
     border-radius: 8px;
@@ -66,11 +68,11 @@ dl >dt {
 /* nav */
 .tab-nab {
     display: flex;
-    height: 50px;
+    height: 40px;
     margin-top: 50px;
 }
 
-.tab-nab > .nav_tab {
+.tab-nab>.nav_tab {
     width: 100px;
     height: 100%;
     border-top-left-radius: 10px;
@@ -80,6 +82,12 @@ dl >dt {
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 226, 230, 0.877);
+}
+
+/* 지도 */
+#map {
+    width: 800px;
+    height: 600px;
 }
 
 /* 버튼 */

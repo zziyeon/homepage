@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="/css/common/common.css">
     <link rel="stylesheet" href="/css/sell/sell_product_view.css">
     <link rel="icon" href="/image/icon.svg">
-    
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=035193584894ec4e375eb2ee909abe2f&libraries=services,clusterer,drawing"></script>
+
 
 </head>
 
@@ -148,15 +150,16 @@
                         <img src="" alt="">
                     </div>
                     <div class="contenxt">
-                        <p>돼지국밥 3그릇 있습니다.
-                            마감시간 9시 전까지 와서 싼 가격에포장하실 분 거래주세요.
-                            매일13시간 끓여 만든 육수, 신선한 재료
-                            많이 찾아와 주세요.
+                        <p>돼지국밥 3그릇 있습니다.</p>
+                        <p>마감시간 9시 전까지 와서 싼 가격에포장하실 분 거래주세요.</p>
+                        <p>매일13시간 끓여 만든 육수, 신선한 재료</p>
+                        <p>많이 찾아와 주세요.</p>
                         </p>
                     </div>
                 </div>
                 <div id="store_location">
-
+                    <div id="map"> </div> <!-- 가게 위치 지도로 표시-->
+                    <button onclick="panTo()">가게위치</button>
                 </div>
                 <div id="reply">
 
@@ -178,10 +181,9 @@
         </footer>
         <!-- //footer -->
     </div>
+
 </body>
 
-<script>
-
-</script>
+<script defer src="/js/sell/store_location.js"></script>
 
 </html>

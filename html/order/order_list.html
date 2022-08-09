@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 판매관리 | GREATE</title>
+    <link rel="stylesheet" href="/css/common/common.css">
+    <link rel="stylesheet" href="/css/order/order_list.css">
+    <link rel="icon" href="/image/icon.svg">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header class="header container">
+            <nav class="top-menu content">
+                <!-- <a href="#" class="top-menu__member">회원</a> -->
+                <li class="top-menu__member">어피치 님
+                    <ul>
+                        <li><a href="/html/buy/write.html">판매글 작성</a></li>
+                        <li><a href="#">판매 내역</a></li>
+                        <li><a href="#">판매 정보</a></li>
+                        <li><a href="#">판매 목록</a></li>
+                        <li><a href="#">내 프로필</a></li>
+                        <li><a href="/html/member/myinfo.html">개인정보</a></li>
+                        <li><a href="/html/no_mem_main.html">로그아웃</a></li>
+                    </ul>
+                </li>
+
+                <a href="" class="top-menu__cs">고객센터</a>
+            </nav>
+            <div class="logo content"><a href="/html/mem_main.html">GR<span>EAT</span></a></div>
+            <nav class="bottom-menu content">
+                <div class="category">
+                    <ul>
+                        <li class="food-category">업종별 카테고리
+                            <ul>
+                                <li><a href="">한식</a></li>
+                                <li><a href="">중식</a></li>
+                                <li><a href="">일식</a></li>
+                                <li><a href="">양식</a></li>
+                                <li><a href="">아시안식</a></li>
+                                <li><a href="">분식</a></li>
+                                <li><a href="">도시락</a></li>
+                                <li><a href="">카페/디저트</a></li>
+                            </ul>
+                        </li>
+                        <li class="region-category">지역별 카테고리
+                            <ul>
+                                <li><a href="">서울</a></li>
+                                <li><a href="">인천</a></li>
+                                <li><a href="">대전</a></li>
+                                <li><a href="">광주</a></li>
+                                <li><a href="">대구</a></li>
+                                <li><a href="">울산</a></li>
+                                <li><a href="">부산</a></li>
+                                <li><a href="">제주</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <input type="text" class="search__search-box" placeholder="  검색어를 입력하세요.">
+                    <a href="" class="search__search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </nav>
+        </header>
+        <!-- //header -->
+
+        <!-- main -->
+        <main class="main container">
+            <div class="main-side-left">
+                <h3>판매 관리</h3>
+            </div>
+            <div class="main-side-right">
+                <div class="main-title">
+                    <i class="bar"></i>
+                    <h2>판매중</h2>
+                </div>
+                <div class="order-manage">
+                    <div class="order-choice">
+                        <div class="drop__period">
+                            <select name="" id="">
+                                <option value="주문기간" selected disabled>주문기간</option>
+                                <option value="전체">전체</option>
+                                <option value="당일">당일</option>
+                                <option value="일주일">일주일</option>
+                                <option value="한달">한달</option>
+                            </select>
+                        </div>
+                        <div class="drop__status">
+                            <select name="" id="">
+                                <option value="주문상태" selected disabled>주문상태</option>
+                                <option value="전체">전체</option>
+                                <option value="결제완료">결제완료</option>
+                                <option value="예약중">예약중</option>
+                                <option value="결제취소">결제취소</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ordered-list">
+                        <div class="product">
+                            <div class="p_name p_content">딸기케이크</div>
+                            <div class="p_orderer p_content"><label for="">주문자: <span>레오</span></label></div>
+                            <div class="p orderDate p_content">
+                                <label for="">주문일: <span>2022-05-18</span> | 결제금액: <span>4500</span>원</label>
+                            </div>
+                            <div class="p_status">
+                                <select class="p_status" name="" id="">
+                                    <option value="주문상태" selected disabled>주문상태</option>
+                                    <option value="전체">전체</option>
+                                    <option value="결제완료">결제완료</option>
+                                    <option value="예약중">예약중</option>
+                                    <option value="결제취소">결제취소</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="p_name p_content">레몬에이드</div>
+                            <div class="p_orderer p_content"><label for="">주문자: <span>콘</span></label></div>
+                            <div class="p orderDate p_content">
+                                <label for="">주문일: <span>2022-06-10</span> | 결제금액: <span>5500</span>원</label>
+                            </div>
+                            <div class="p_status p_content">
+                                <select name="" id="">
+                                    <option value="주문상태" selected disabled>주문상태</option>
+                                    <option value="전체">전체</option>
+                                    <option value="결제완료">결제완료</option>
+                                    <option value="예약중">예약중</option>
+                                    <option value="결제취소">결제취소</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="p_name p_content">블루베리스콘</div>
+                            <div class="p_orderer p_content"><label for="">주문자: <span>도날드</span></label></div>
+                            <div class="p orderDate p_content">
+                                <label for="">주문일: <span>2022-06-23</span> | 결제금액: <span>4500</span>원</label>
+                            </div>
+                            <div class="p_status p_content">
+                                <select name="" id="">
+                                    <option value="주문상태" selected disabled>주문상태</option>
+                                    <option value="전체">전체</option>
+                                    <option value="결제완료">결제완료</option>
+                                    <option value="예약중">예약중</option>
+                                    <option value="결제취소">결제취소</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="product p_content">
+                            <div class="p_name p_content">초콜릿무스</div>
+                            <div class="p_orderer p_content"><label for="">주문자: <span>도날드</span></label></div>
+                            <div class="p orderDate p_content">
+                                <label for="">주문일: <span>2022-06-23</span> | 결제금액: <span>4500</span>원</label>
+                            </div>
+                            <div class="p_status p_content">
+                                <select name="" id="">
+                                    <option value="주문상태" selected disabled>주문상태</option>
+                                    <option value="전체">전체</option>
+                                    <option value="결제완료">결제완료</option>
+                                    <option value="예약중">예약중</option>
+                                    <option value="결제취소">결제취소</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+        </main>
+        <!-- //main -->
+
+        <!-- footer -->
+        <footer class="footer container">
+            <p class="content"></p>
+        </footer>
+        <!-- footer -->
+    </div>
+</body>
+
+</html>
