@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 판매내역 | GREATE</title>
+    <link rel="stylesheet" href="/css/common/common.css">
+    <link rel="stylesheet" href="/my/판매내역.css">
+    <link rel="icon" href="/image/icon.svg">
+    <script src="https://kit.fontawesome.com/132ba309f6.js" crossorigin="anonymous"></script>
+
+</head>
+<!-- 현재 고객이 주문한 내역을 받아서 확인하는것. -->
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header class="header container">
+            <nav class="top-menu content">
+                <!-- <a href="#" class="top-menu__member">회원</a> -->
+                <li class="top-menu__member">어피치 님
+                    <ul>
+                        <li><a href="/html/buy/write.html">판매글 작성</a></li>
+                        <li><a href="#">판매 내역</a></li>
+                        <li><a href="#">판매 정보</a></li>
+                        <li><a href="#">판매 목록</a></li>
+                        <li><a href="#">내 프로필</a></li>
+                        <li><a href="/html/member/myinfo.html">개인정보</a></li>
+                        <li><a href="/html/no_mem_main.html">로그아웃</a></li>
+                    </ul>
+                </li>
+
+                <a href="" class="top-menu__cs">고객센터</a>
+            </nav>
+            <div class="logo content"><a href="/html/mem_main.html">GR<span>EAT</span></a></div>
+            <nav class="bottom-menu content">
+                <div class="category">
+                    <ul>
+                        <li class="food-category">업종별 카테고리
+                            <ul>
+                                <li><a href="">한식</a></li>
+                                <li><a href="">중식</a></li>
+                                <li><a href="">일식</a></li>
+                                <li><a href="">양식</a></li>
+                                <li><a href="">아시안식</a></li>
+                                <li><a href="">분식</a></li>
+                                <li><a href="">도시락</a></li>
+                                <li><a href="">카페/디저트</a></li>
+                            </ul>
+                        </li>
+                        <li class="region-category">지역별 카테고리
+                            <ul>
+                                <li><a href="">서울</a></li>
+                                <li><a href="">인천</a></li>
+                                <li><a href="">대전</a></li>
+                                <li><a href="">광주</a></li>
+                                <li><a href="">대구</a></li>
+                                <li><a href="">울산</a></li>
+                                <li><a href="">부산</a></li>
+                                <li><a href="">제주</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <input type="text" class="search__search-box" placeholder="  검색어를 입력하세요.">
+                    <a href="" class="search__search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </nav>
+        </header>
+        <!-- //header -->
+
+        <!-- main -->
+        <main class="main container">
+            <div class="main-side-left">
+                <div class="p-manage">
+                    <h3>상품 관리</h3>
+                </div>
+                <div class="p-manage-choice">
+                    <h3>판매 내역</h3>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+
+            </div>
+            <div class="main-side-right">
+                <div class="main-title">
+                    <i class="bar"></i>
+                    <h2>판매내역</h2>
+                    <span>고객과 거래한 내역을 확인하실 수 있습니다.</span>
+                </div>
+                <div class="order-manage">
+                    <div class="order-choice">
+                        <div class="drop__period">
+                            <input type="date" name="" id="">~<input type="date" name="" id="">
+                            <!-- <select name="" id="">
+                                <option value="거래기간" selected disabled>거래기간</option>
+                                <option value="전체">전체</option>
+                                <option value="당일">당일</option>
+                                <option value="일주일">일주일</option>
+                                <option value="한달">한달</option>
+                            </select> -->
+                        </div>
+                        <div class="drop__status">
+                            <select name="" id="">
+                                <option value="판매상태" selected disabled>판매상태</option>
+                                <option value="전체">전체</option>
+                                <option value="예약중">예약중</option>
+                                <option value="판매완료">판매완료</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ordered-list">
+                        <table>
+                            <tr class="table_header">
+                                <th>주문번호</th>
+                                <th>주문일시</th>
+                                <th>구매자</th>
+                                <th>상품명</th>
+                                <th>수량</th>
+                                <th>주문액</th>
+                                <th>픽업시간</th>
+                                <th>결제 유형</th>
+                                <th>주문 상태</th>
+                            </tr>
+                            <tr>
+                                <td><span>a000001</span></td>
+                                <td><span>2022-08-03</span></td>
+                                <td><span>콘</span></td>
+                                <td><a href=""><span>딸기케이크</span></a></td>
+                                <td><span>2</span>개</td>
+                                <td><span>6,500</span>원</td>
+                                <td><span>18:50</span></td>
+                                <td>온라인 결제</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="예약중">예약중</option>
+                                        <option value="판매완료">판매완료</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>a000035</span></td>
+                                <td><span>2022-08-02</span></td>
+                                <td><span>뚜비</span></td>
+                                <td><a href=""><span>플레인스콘</span></a></td>
+                                <td><span>1</span>개</td>
+                                <td><span>6,500</span>원</td>
+                                <td><span>17:30</span></td>
+                                <td>온라인 결제</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="예약중">예약중</option>
+                                        <option value="판매완료">판매완료</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>a000431</span></td>
+                                <td><span>2022-07-02</span></td>
+                                <td><span>뚝이아</span></td>
+                                <td><a href=""><span>버블티</span></a></td>
+                                <td><span>1</span>개</td>
+                                <td><span>5,800</span>원</td>
+                                <td><span>20:10</span></td>
+                                <td>온라인 결제</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="예약중">예약중</option>
+                                        <option value="판매완료"selected>판매완료</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- //main -->
+
+        <!-- footer -->
+        <footer class="footer container">
+            <p class="content"></p>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+</body>
+
+<script defer src="/js/sell/store_location.js"></script>
+
+</html>

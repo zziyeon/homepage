@@ -21,7 +21,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  height: 150px;
+  height: 156px;
   width: 100%;
   border-bottom: 2px solid var(--main-color-gre);
   max-width: 1900px;
@@ -152,10 +152,14 @@
 
 .main>.title {
   text-align: center;
-  font-size: 22px;
+  font-size: 500px;
   font-weight: bold;
   margin: 20px 0px;
   width: 100%;
+}
+
+.main>.title >span {
+  font-size: 28px;
 }
 
 /* footer */

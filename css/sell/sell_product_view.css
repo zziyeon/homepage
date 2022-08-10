@@ -23,8 +23,8 @@
 }
 
 .product-img {
-    width: 430px;
-    height: 552px;
+    width: 350px;
+    height: 400px;
     background: url("https://cdn.pixabay.com/photo/2016/04/14/17/01/soup-1329266__340.jpg") 50% 0%;
     object-fit: cover;
 }

@@ -8,6 +8,10 @@
     display: flex;
 }
 
+h3 {
+    cursor: pointer;
+}
+
 /* 메인-사이드(왼쪽) */
 .main-side-left {
     flex: 1;
@@ -15,19 +19,33 @@
     margin: 0 20px;
 }
 
-.main-side-left .each-status {
+.main-side-left > .p_manage {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 10px;
+    background-color: rgba(255, 234, 113, 0.445);
+    border-radius: 10px;
+}
+
+.main-side-left > .p_manage > i {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+}
+
+/* .main-side-left .each-status {
     height: 35px;
     display: flex;
     justify-content: left;
     align-items: center;
     font-size: 16px;
-}
-.main-side-left .each-status i {
+} */
+/* .main-side-left .each-status i {
     width: 20px;
     display: flex;
     justify-content: center;
     margin: 0 10px;
-}
+} */
 
 /* 메인-사이드(오른쪽) */
 .main-side-right {
@@ -66,28 +84,28 @@
 }
 
 /*  주문 리스트 */
-.ordered-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 22px;
+.ordered-list table {
+    width: 800px;
+    border-top: 1px solid black;
 }
 
-.p_content {
-    margin: 5px 0;
+th {    
+    height: 30px;
     font-weight: bold;
+    border-bottom: 1px solid black;
 }
 
-.p_content  span {
-    font-weight: lighter;
-}
-.ordered-list>.product {
-    width: 352px;
-    padding: 20px;
-    outline: 1.5px solid black;
-    border-radius: 8px;
+.ordered-list table td {
+    text-align: center;
+    vertical-align: middle;    
 }
 
-.p_status select {
-    width: 100%;
-    height: 33px;
+.ordered-list table img {
+    width: 100px;
+    height: 100px;
+}
+
+select {
+    width: 150px;
+    height: 30px;
 }

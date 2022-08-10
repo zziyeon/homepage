@@ -3,18 +3,38 @@
 * {
     /* outline: 1px solid plum; */
 }
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 h2 {
-    text-align: center;
+    /* text-align: center; */
     line-height: 3;
 }
 
-th {
+.main >.p-write-info {
+    /* background-color: yellow; */
+    outline: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    width: 650px;
     display: flex;
     flex-direction: column;
+    justify-items: center;
+}
+
+th {
+    font-weight: bold;
+    vertical-align: middle;   
+    /* display: flex; */
+    /* flex-direction: column;
     text-align: center;
     justify-content: center;
     justify-items: center;
+    text-align: center;
+     */
 }
 label {
     display: inline-block;
@@ -22,6 +42,7 @@ label {
 }
 td {
     padding: 6px;
+    
 }
 input, select {
     display: inline-block;

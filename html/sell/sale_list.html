@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 판매관리 | GREATE</title>
+    <title> 판매목록 | GREATE</title>
     <link rel="stylesheet" href="/css/common/common.css">
     <link rel="stylesheet" href="/css/order/order_list.css">
     <link rel="icon" href="/image/icon.svg">
+    <script src="https://kit.fontawesome.com/132ba309f6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -73,11 +74,31 @@
         <main class="main container">
             <div class="main-side-left">
                 <h3>판매 관리</h3>
+                <div class="orders-status">
+                    <div class="status-ing each-status">
+                        <img src="/image/판매목록.png" alt="">
+                        <a href="#"> 판매목록</a>
+                    </div>
+                    <div class="status-booking each-status">
+                        <img src="/image/예약중.png" alt="">
+                        <a href="#"> 예약중</a>
+                    </div>
+                    <div class="status-ed each-status">
+                        <img src="/image/판매완료.png" alt="">
+                        <a href="#"> 판매완료</a>
+                    </div>
+                    <!-- <div class="status-cancel each-status">
+                        <i class="fa-solid fa-rectangle-xmark"></i>
+                        <a href="#"> 판매취소</a>
+                    </div> -->
+                </div>
+                
             </div>
             <div class="main-side-right">
                 <div class="main-title">
                     <i class="bar"></i>
-                    <h2>판매중</h2>
+                    <h2>예약중</h2>
+                    <span>주문받은 상품</span>
                 </div>
                 <div class="order-manage">
                     <div class="order-choice">
@@ -90,7 +111,7 @@
                                 <option value="한달">한달</option>
                             </select>
                         </div>
-                        <div class="drop__status">
+                        <!-- <div class="drop__status">
                             <select name="" id="">
                                 <option value="주문상태" selected disabled>주문상태</option>
                                 <option value="전체">전체</option>
@@ -98,9 +119,11 @@
                                 <option value="예약중">예약중</option>
                                 <option value="결제취소">결제취소</option>
                             </select>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="ordered-list">
+
+                        <!-- ul 안에 li로 만들어보기! -->
                         <div class="product">
                             <div class="p_name p_content">딸기케이크</div>
                             <div class="p_orderer p_content"><label for="">주문자: <span>레오</span></label></div>
@@ -110,7 +133,6 @@
                             <div class="p_status">
                                 <select class="p_status" name="" id="">
                                     <option value="주문상태" selected disabled>주문상태</option>
-                                    <option value="전체">전체</option>
                                     <option value="결제완료">결제완료</option>
                                     <option value="예약중">예약중</option>
                                     <option value="결제취소">결제취소</option>
@@ -126,7 +148,6 @@
                             <div class="p_status p_content">
                                 <select name="" id="">
                                     <option value="주문상태" selected disabled>주문상태</option>
-                                    <option value="전체">전체</option>
                                     <option value="결제완료">결제완료</option>
                                     <option value="예약중">예약중</option>
                                     <option value="결제취소">결제취소</option>
@@ -142,7 +163,6 @@
                             <div class="p_status p_content">
                                 <select name="" id="">
                                     <option value="주문상태" selected disabled>주문상태</option>
-                                    <option value="전체">전체</option>
                                     <option value="결제완료">결제완료</option>
                                     <option value="예약중">예약중</option>
                                     <option value="결제취소">결제취소</option>
@@ -158,7 +178,6 @@
                             <div class="p_status p_content">
                                 <select name="" id="">
                                     <option value="주문상태" selected disabled>주문상태</option>
-                                    <option value="전체">전체</option>
                                     <option value="결제완료">결제완료</option>
                                     <option value="예약중">예약중</option>
                                     <option value="결제취소">결제취소</option>
