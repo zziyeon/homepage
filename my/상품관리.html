@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 판매내역 | GREATE</title>
     <link rel="stylesheet" href="/css/common/common.css">
-    <link rel="stylesheet" href="/my/상품관리.css">
+    <link rel="stylesheet" href="/my/판매내역.css">
     <link rel="icon" href="/image/icon.svg">
     <script src="https://kit.fontawesome.com/132ba309f6.js" crossorigin="anonymous"></script>
 
@@ -76,30 +76,34 @@
         <!-- main -->
         <main class="main container">
             <div class="main-side-left">
-                <div class="p_manage">
-                    <h4>상품 관리</h4>
+                <div class="p-manage p-manage-choice">
+                    <h3><a href="/my/상품관리.html">상품 관리</a></h3>
                     <i class="fa-solid fa-angle-right"></i>
                 </div>
-
-                <h4>판매 내역</h4>
-
+                <div class="p-manage">
+                    <h3><a href="/my/판매내역.html">판매 내역</a></h3>
+                </div>
             </div>
             <div class="main-side-right">
-                <div class="main-title">
-                    <i class="bar"></i>
-                    <h2>상품관리</h2>
-                    <span>판매하는 모든 상품 상태</span>
+                <div class="main-head">
+                    <div class="main-title">
+                        <i class="bar"></i>
+                        <h2>상품관리</h2>
+                        <span>회원이 판매하는 모든 상품 정보를 확인하실 수 있습니다.</span>
+                    </div>
+                    <img src="/my/상품관리.png" alt="">
                 </div>
                 <div class="order-manage">
                     <div class="order-choice">
                         <div class="drop__period">
-                            <select name="" id="">
+                            <input type="date" name="" id="">~<input type="date" name="" id="">
+                            <!-- <select name="" id="">
                                 <option value="등록기간" selected disabled>등록기간</option>
                                 <option value="전체">전체</option>
                                 <option value="당일">당일</option>
                                 <option value="일주일">일주일</option>
                                 <option value="한달">한달</option>
-                            </select>
+                            </select> -->
                         </div>
                         <div class="drop__status">
                             <select name="" id="">
@@ -123,7 +127,8 @@
                                 <th>기능</th>
                             </tr>
                             <tr>
-                                <td><img src="https://media.istockphoto.com/photos/fresh-strawberry-cake-with-cream-in-close-up-picture-id1316260838?b=1&k=20&m=1316260838&s=170667a&w=0&h=tVFyqbMds3BXZP5AyAV3xxvcKKng59gxLkLSoFEZRDM=" alt=""></td>
+                                <td><img src="https://media.istockphoto.com/photos/fresh-strawberry-cake-with-cream-in-close-up-picture-id1316260838?b=1&k=20&m=1316260838&s=170667a&w=0&h=tVFyqbMds3BXZP5AyAV3xxvcKKng59gxLkLSoFEZRDM="
+                                        alt=""></td>
                                 <td>
                                     <select name="" id="">
                                         <option value="판매중">판매중</option>
@@ -139,7 +144,8 @@
                                 <td><button>수정</button></td>
                             </tr>
                             <tr>
-                                <td><img src="https://media.istockphoto.com/photos/scone-picture-id1311079135?b=1&k=20&m=1311079135&s=170667a&w=0&h=OHHcrTrnNC5gYZpPmhAvctr5b_YXT4DWcivjcAsg8iI=" alt=""></td>
+                                <td><img src="https://media.istockphoto.com/photos/scone-picture-id1311079135?b=1&k=20&m=1311079135&s=170667a&w=0&h=OHHcrTrnNC5gYZpPmhAvctr5b_YXT4DWcivjcAsg8iI="
+                                        alt=""></td>
                                 <td>
                                     <select name="" id="">
                                         <option value="판매중">판매중</option>

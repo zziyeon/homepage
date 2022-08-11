@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 * {
-    outline: 1px solid rosybrown;
+    /* outline: 1px solid rosybrown; */
 }
 
 /* article */
@@ -14,11 +14,14 @@
 } */
 .main {
     width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .product {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
 }
 
@@ -30,7 +33,7 @@
 }
 
 .product-info {
-    width: 560px;
+    width: 500px;
 }
 
 dl {
@@ -68,8 +71,10 @@ dl>dt {
 /* nav */
 .tab-nab {
     display: flex;
+    width: 800px;
     height: 40px;
     margin-top: 50px;
+    border-bottom: 1px solid rgb(206, 206, 206);
 }
 
 .tab-nab>.nav_tab {
