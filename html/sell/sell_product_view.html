@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="/css/common/common.css">
     <link rel="stylesheet" href="/css/sell/sell_product_view.css">
     <link rel="icon" href="/image/icon.svg">
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=035193584894ec4e375eb2ee909abe2f&libraries=services,clusterer,drawing"></script>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=035193584894ec4e375eb2ee909abe2f&libraries=services,clusterer,drawing"></script>
+        <script src="https://kit.fontawesome.com/132ba309f6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -74,33 +76,40 @@
         <main class="main container">
             <article id="product-atf" class="product">
                 <div class="product">
-                    <div class="product-img"></div>
+                    <div class="product-img">
+                        <img src="https://cdn.pixabay.com/photo/2016/10/27/22/12/cakes-1776661__340.jpg" alt="">
+                    </div>
                     <div class="product-info">
-                        <div class="p_store">
-                            닉네임: 
-                            <span class="nickName">어피치</span>
-                            <label for="#">가게명: </label><span>싸다구 돼지국밥</span>
-                        </div>
+                        <!-- <div class="p_store">
+                            <div class="store-profile">
+                                <img class="store-profile_img" src="/image/케이크.PNG" alt="">
+                            </div>
+                            <label for="#">가게명: </label><span>싸다구 디저트들</span>
+                        </div> -->
                         <div class="p_top">
                             <div class="p_type">
-                                <label for="">업종:</label><span>한식</span>
+                                <label for="">업종: </label><span>카페/디저트</span>
                             </div>
                             <div class="p_title">
-                                <h2>돼지국밥 싸게 드실 분</h2>
+                                <h3>담백한 생크림과 부드러운 시트, 딸기를 풍성하게 올린 생크림 케이크 드실분</h3>
                             </div>
                         </div>
                         <div class="p_middle">
-                            <span>60%</span>
+                            <span id="discount_rate">60%</span>
                             <span>4,000</span>
                             <span>원</span>
                         </div>
                         <div class="p_middle_bottom">
-                            <span class="nomal-price">10,000원</span>
+                            <span class="nomal-price">10,000</span>원
                         </div>
                         <div class="info">
                             <dl>
+                                <dt>가게명</dt>
+                                <dd>달다구리 베이커리</dd>
+                            </dl>
+                            <dl>
                                 <dt>제품명</dt>
-                                <dd>돼지국밥</dd>
+                                <dd>딸기 생크림 케이크</dd>
                             </dl>
                             <dl>
                                 <dt>수량</dt>
@@ -117,14 +126,21 @@
                             <dl>
                                 <dt>수량</dt>
                                 <div class="count_btn">
-                                    <button class="minus_btn" aria-label="수량내리기"></button>
+                                    <button class="minus_btn" aria-label="수량내리기">-</button>
                                     <span>1</span>
-                                    <button class="plus_btn" aria-label="수량올리기"></button>
+                                    <button class="plus_btn" aria-label="수량올리기">+</button>
+                                </div>
+                            </dl>
+                            <dl>
+                                <dt>총 상품금액</dt>
+                                <div class="total-price">
+                                    <span>6,500</span>원
                                 </div>
                             </dl>
                         </div>
-                        <div class="product_buy">
-                            <button class="buy_btn"> 구매하기</button>
+                        <div class="product-btn">
+                            <button class="product-btn--like"><i class="fa-regular fa-heart"></i></button>
+                            <button class="product-btn--buy"> 구매하기</button>
                         </div>
                     </div>
                 </div>
@@ -133,12 +149,12 @@
             <!-- nav -->
             <div class="tab-nab">
                 <div class="nav_tab">
-                    <a href="">
-                        <span>상품설명</span>
+                    <a href="#s">
+                        <span>상품소개</span>
                     </a>
                 </div>
                 <div class="nav_tab">
-                    <a href="">
+                    <a href="#ss">
                         <span>위치</span>
                     </a>
                 </div>
@@ -151,21 +167,35 @@
 
             <!-- 정보 -->
             <div class="goods_wrap">
-                <div id="goods_info">
+                <div class="goods_info">
                     <div>
                         <img src="" alt="">
                     </div>
-                    <div class="contenxt">
-                        <p>돼지국밥 3그릇 있습니다.</p>
+                    <div class="contenxt" id="s">
+                        <p >돼지국밥 3그릇 있습니다.</p>
                         <p>마감시간 9시 전까지 와서 싼 가격에포장하실 분 거래주세요.</p>
                         <p>매일13시간 끓여 만든 육수, 신선한 재료</p>
                         <p>많이 찾아와 주세요.</p>
                         </p>
                     </div>
                 </div>
-                <div id="store_location">
-                    <div id="map"> </div> <!-- 가게 위치 지도로 표시-->
+                <div class="store_location">
+                    <span id="ss"> 해당 가게 위치</span>
+                    <!-- 가게 위치 지도로 표시-->
+                    <div id="map"> </div>
+                    <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+                    <div class="custom_zoomcontrol radius_border">
+                        <span onclick="zoomIn()">
+                            <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png"
+                                alt="확대">
+                        </span>
+                        <span onclick="zoomOut()"><img
+                                src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png"
+                                alt="축소"></span>
+                    </div>
+                    <!-- 가게 위치로 돌아가는 버튼 -->
                     <button onclick="panTo()">가게위치</button>
+                    
                 </div>
                 <div id="reply">
 
@@ -173,180 +203,187 @@
             </div>
 
             <!-- 댓글부분 -->
-            <div class="comment width--900px">
+            <!-- <div class="comment width--900px">
 
                 <div class="comment__title">
-                  <span><i class="fa-regular fa-comments"></i></span>
-                  <span>댓글</span>
-                  <span class="font-size--13px">5</span>
+                    <span><i class="fa-regular fa-comments"></i></span>
+                    <span>댓글</span>
+                    <span class="font-size--13px">5</span>
                 </div>
-      
+
                 <div class="comment__list">
-                  <ul>
-                    <li class="writer">
-                      <div class="comment-box">
-                        <div class="comment-box__profile">
-                          <a href=""><img src="../img/profile.jpg" alt=""></a>
-                        </div>
-                        <div class="comment-box__contents">
-                          <div class="comment-box__top">
-                            <a href="" class="comment-box__nickname font-size--13px  ">닉네임</a>
-                            <div class="comment-box__info">
-                              <a class="comment-box__modify font-size--12px" href="">수정</a>
-                              <a class="comment-box__delete font-size--12px" href="">삭제</a>
+                    <ul>
+                        <li class="writer">
+                            <div class="comment-box">
+                                <div class="comment-box__profile">
+                                    <a href=""><img src="../img/profile.jpg" alt=""></a>
+                                </div>
+                                <div class="comment-box__contents">
+                                    <div class="comment-box__top">
+                                        <a href="" class="comment-box__nickname font-size--13px  ">닉네임</a>
+                                        <div class="comment-box__info">
+                                            <a class="comment-box__modify font-size--12px" href="">수정</a>
+                                            <a class="comment-box__delete font-size--12px" href="">삭제</a>
+                                        </div>
+                                    </div>
+                                    <div class="comment-box__middle">
+                                        <p class="comment-box__text font-size--13px ">Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Maiores, excepturi!</p>
+                                    </div>
+                                    <div class="comment-box__bottom">
+                                        <span class="comment-box__date font-size--12px">2022.08.02 14:25</span>
+                                        <a class="comment-box__reply font-size--12px" href="">답글</a>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="comment-box__middle">
-                            <p class="comment-box__text font-size--13px ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, excepturi!</p>
-                          </div>
-                          <div class="comment-box__bottom">
-                            <span class="comment-box__date font-size--12px">2022.08.02 14:25</span>
-                            <a class="comment-box__reply font-size--12px" href="">답글</a>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-      
-                    <li class="viewer">
-                      <div class="comment-box">
-                        <div class="comment-box__profile">
-                          <a href=""><img src="../img/profile.jpg" alt=""></a>
-                        </div>
-                        <div class="comment-box__contents">
-                          <div class="comment-box__top">
-                            <a href="" class="comment-box__nickname font-size--13px  ">닉네임</a>
-                            <div class="comment-box__info">
-                              <a class="comment-box__report font-size--12px" href="">신고</a>
+                        </li>
+
+                        <li class="viewer">
+                            <div class="comment-box">
+                                <div class="comment-box__profile">
+                                    <a href=""><img src="../img/profile.jpg" alt=""></a>
+                                </div>
+                                <div class="comment-box__contents">
+                                    <div class="comment-box__top">
+                                        <a href="" class="comment-box__nickname font-size--13px  ">닉네임</a>
+                                        <div class="comment-box__info">
+                                            <a class="comment-box__report font-size--12px" href="">신고</a>
+                                        </div>
+                                    </div>
+                                    <div class="comment-box__middle">
+                                        <p class="comment-box__text font-size--13px ">Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Maiores, excepturi!</p>
+                                    </div>
+                                    <div class="comment-box__bottom">
+                                        <span class="comment-box__date font-size--12px">2022.08.02 14:25</span>
+                                        <a class="comment-box__reply font-size--12px" href="">답글</a>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="comment-box__middle">
-                            <p class="comment-box__text font-size--13px ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, excepturi!</p>
-                          </div>
-                          <div class="comment-box__bottom">
-                            <span class="comment-box__date font-size--12px">2022.08.02 14:25</span>
-                            <a class="comment-box__reply font-size--12px" href="">답글</a>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-      
-                    <li class="comment__write">
-                      <div class="reply-box reply-write">
-                        <div class="reply-box__top">
-                          <span class="reply-box__nickname font-size--13px">닉네임</span>
-                        </div>
-                        <div class="reply-box__middle">
-                          <textarea class="reply-box__text" name="" id="" cols="30" rows="10" placeholder="댓글을 입력하세요." autofocus></textarea>
-                        </div>
-                        <div class="reply-box__bottom">
-                          <button class="reply-box__register-btn font-size--12px" href="">등록</button>
-                        </div>
-                      </div>
-                    </li>
-      
-                    <li class="viewer">
-                      <div class="comment-box">
-                        <div class="comment-box__profile">
-                          <a href=""><img src="../img/profile.jpg" alt=""></a>
-                        </div>
-                        <div class="comment-box__contents">
-                          <div class="comment-box__top">
-                            <a href="" class="comment-box__nickname font-size--13px  ">닉네임</a>
-                            <div class="comment-box__info">
-                              <a class="comment-box__report font-size--12px" href="">신고</a>
+                        </li>
+
+                        <li class="comment__write">
+                            <div class="reply-box reply-write">
+                                <div class="reply-box__top">
+                                    <span class="reply-box__nickname font-size--13px">닉네임</span>
+                                </div>
+                                <div class="reply-box__middle">
+                                    <textarea class="reply-box__text" name="" id="" cols="30" rows="10"
+                                        placeholder="댓글을 입력하세요." autofocus></textarea>
+                                </div>
+                                <div class="reply-box__bottom">
+                                    <button class="reply-box__register-btn font-size--12px" href="">등록</button>
+                                </div>
                             </div>
-                          </div>
-                          <div class="comment-box__middle">
-                            <p class="comment-box__text font-size--13px ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, excepturi!</p>
-                          </div>
-                          <div class="comment-box__bottom">
-                            <span class="comment-box__date font-size--12px">2022.08.02 14:25</span>
-                            <a class="comment-box__reply font-size--12px" href="">답글</a>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-      
-                    <li class="reply-viewer">
-                      <div class="comment-box">
-                        <div class="comment-box__profile">
-                          <a href=""><img src="../img/profile.jpg" alt=""></a>
-                        </div>
-                        <div class="comment-box__contents">
-                          <div class="comment-box__top">
-                            <a href="" class="comment-box__nickname font-size--13px  ">닉네임</a>
-                            <div class="comment-box__info">
-                              <a class="comment-box__report font-size--12px" href="">신고</a>
+                        </li>
+
+                        <li class="viewer">
+                            <div class="comment-box">
+                                <div class="comment-box__profile">
+                                    <a href=""><img src="../img/profile.jpg" alt=""></a>
+                                </div>
+                                <div class="comment-box__contents">
+                                    <div class="comment-box__top">
+                                        <a href="" class="comment-box__nickname font-size--13px  ">닉네임</a>
+                                        <div class="comment-box__info">
+                                            <a class="comment-box__report font-size--12px" href="">신고</a>
+                                        </div>
+                                    </div>
+                                    <div class="comment-box__middle">
+                                        <p class="comment-box__text font-size--13px ">Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Maiores, excepturi!</p>
+                                    </div>
+                                    <div class="comment-box__bottom">
+                                        <span class="comment-box__date font-size--12px">2022.08.02 14:25</span>
+                                        <a class="comment-box__reply font-size--12px" href="">답글</a>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="comment-box__middle">
-                            <p class="comment-box__text font-size--13px ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, excepturi!</p>
-                          </div>
-                          <div class="comment-box__bottom">
-                            <span class="comment-box__date font-size--12px">2022.08.02 14:25</span>
-                            <a class="comment-box__reply font-size--12px" href="">답글</a>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-      
-                    <li class="reply-writer">
-                      <div class="comment-box">
-                        <div class="comment-box__profile">
-                          <a href=""><img src="../img/profile.jpg" alt=""></a>
-                        </div>
-                        <div class="comment-box__contents">
-                          <div class="comment-box__top">
-                            <a href="" class="comment-box__nickname font-size--13px  ">닉네임</a>
-                            <div class="comment-box__info">
-                              <a class="comment-box__modify font-size--12px" href="">수정</a>
-                              <a class="comment-box__delete font-size--12px" href="">삭제</a>
+                        </li>
+
+                        <li class="reply-viewer">
+                            <div class="comment-box">
+                                <div class="comment-box__profile">
+                                    <a href=""><img src="../img/profile.jpg" alt=""></a>
+                                </div>
+                                <div class="comment-box__contents">
+                                    <div class="comment-box__top">
+                                        <a href="" class="comment-box__nickname font-size--13px  ">닉네임</a>
+                                        <div class="comment-box__info">
+                                            <a class="comment-box__report font-size--12px" href="">신고</a>
+                                        </div>
+                                    </div>
+                                    <div class="comment-box__middle">
+                                        <p class="comment-box__text font-size--13px ">Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Maiores, excepturi!</p>
+                                    </div>
+                                    <div class="comment-box__bottom">
+                                        <span class="comment-box__date font-size--12px">2022.08.02 14:25</span>
+                                        <a class="comment-box__reply font-size--12px" href="">답글</a>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="comment-box__middle">
-                            <p class="comment-box__text font-size--13px ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, excepturi!</p>
-                          </div>
-                          <div class="comment-box__bottom">
-                            <span class="comment-box__date font-size--12px">2022.08.02 14:25</span>
-                            <a class="comment-box__reply font-size--12px" href="">답글</a>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    
-                  </ul>
+                        </li>
+
+                        <li class="reply-writer">
+                            <div class="comment-box">
+                                <div class="comment-box__profile">
+                                    <a href=""><img src="../img/profile.jpg" alt=""></a>
+                                </div>
+                                <div class="comment-box__contents">
+                                    <div class="comment-box__top">
+                                        <a href="" class="comment-box__nickname font-size--13px  ">닉네임</a>
+                                        <div class="comment-box__info">
+                                            <a class="comment-box__modify font-size--12px" href="">수정</a>
+                                            <a class="comment-box__delete font-size--12px" href="">삭제</a>
+                                        </div>
+                                    </div>
+                                    <div class="comment-box__middle">
+                                        <p class="comment-box__text font-size--13px ">Lorem ipsum dolor, sit amet
+                                            consectetur adipisicing elit. Maiores, excepturi!</p>
+                                    </div>
+                                    <div class="comment-box__bottom">
+                                        <span class="comment-box__date font-size--12px">2022.08.02 14:25</span>
+                                        <a class="comment-box__reply font-size--12px" href="">답글</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
                 <div class="comment__write">
-                  <div class="reply-box">
-                    <div class="reply-box__top">
-                      <span class="reply-box__nickname font-size--13px">닉네임</span>
+                    <div class="reply-box">
+                        <div class="reply-box__top">
+                            <span class="reply-box__nickname font-size--13px">닉네임</span>
+                        </div>
+                        <div class="reply-box__middle">
+                            <textarea class="reply-box__text" name="" id="" cols="30" rows="10" placeholder="댓글을 입력하세요."
+                                autofocus></textarea>
+                        </div>
+                        <div class="reply-box__bottom">
+                            <button class="reply-box__register-btn font-size--12px" href="">등록</button>
+                        </div>
                     </div>
-                    <div class="reply-box__middle">
-                      <textarea class="reply-box__text" name="" id="" cols="30" rows="10" placeholder="댓글을 입력하세요." autofocus></textarea>
-                    </div>
-                    <div class="reply-box__bottom">
-                      <button class="reply-box__register-btn font-size--12px" href="">등록</button>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-            <!-- //댓글부분 -->
+            </div> -->
+    </div>
+    <!-- //댓글부분 -->
 
-            <!-- 버튼 -->
-            <div class="product_p_btn">
-                <button class="btn_del">삭제</button>
-                <button class="btn_modify">수정</button>
-                <button class="btn_list">목록</button>
-            </div>
-        </main>
-        <!-- //main -->
+    <!-- 버튼 -->
+    <div class="product_page_btn">
+        <button class="btn_del btn">삭제</button>
+        <button class="btn_modify btn">수정</button>
+        <button class="btn_list btn">목록</button>
+    </div>
+    </main>
+    <!-- //main -->
 
-        <!-- footer -->
-        <footer class="footer container">
-            <p class="content"></p>
-        </footer>
-        <!-- //footer -->
+    <!-- footer -->
+    <footer class="footer container">
+        <p class="content"></p>
+    </footer>
+    <!-- //footer -->
     </div>
 
 </body>

@@ -25,15 +25,45 @@
     width: 100%;
 }
 
+/* 상품사진(왼쪽) */
 .product-img {
     width: 350px;
     height: 400px;
-    background: url("https://cdn.pixabay.com/photo/2016/04/14/17/01/soup-1329266__340.jpg") 50% 0%;
+    /* background: url("https://cdn.pixabay.com/photo/2016/04/14/17/01/soup-1329266__340.jpg") 50% 0%; */
     object-fit: cover;
 }
 
+/* 판매 정보(오른쪽) */
 .product-info {
     width: 500px;
+}
+.product-info > .p_store  {
+    display: flex;
+    align-items: center;
+}
+
+.product-info > .p_store  .store-profile .store-profile_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.product-info > .p_store span {
+    font-family: 'NanumBarunGothicLight';
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.product-info > .p_middle > #discount_rate {
+    color: rgb(235, 19, 3);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product-info > .p_middle_bottom  {
+    text-decoration: line-through;
+    color: rgb(167, 167, 167);
+    font-size: 14px;
 }
 
 dl {
@@ -59,13 +89,30 @@ dl>dt {
     height: 100%;
     line-height: 19px;
 }
-
-.product_buy>.buy_btn {
-    width: 432px;
+.count_btn {
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 5px;
+}
+.count_btn > .minus_btn,.plus_btn {
+    width: 15px;
+    height: 20px;
+    border: none;
+}
+.product-info>.product-btn button{
     height: 45px;
-    background-color: var(--main-color-yel);
     border: 0;
     border-radius: 8px;
+}
+.product-info>.product-btn > .product-btn--like {
+    width: 50px;
+    font-size: 20px;
+}
+
+.product-info>.product-btn > .product-btn--buy {
+    width: 300px;
+    background-color: var(--main-color-yel);
+    font-weight: bold;
 }
 
 /* nav */
@@ -89,10 +136,51 @@ dl>dt {
     background-color: rgba(255, 226, 230, 0.877);
 }
 
-/* 지도 */
-#map {
-    width: 800px;
+/* 상품 정보 */
+.goods_wrap > .goods_info {
     height: 600px;
+    text-align: center;
+
 }
+/* 지도 */
+.store_location {
+    width: 700px;
+    height: 500px;
+    position:relative;
+    /* overflow:hidden; */
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+.radius_border{
+    border:1px solid #919191;
+    border-radius:5px;
+}  
+
+.store_location > .custom_zoomcontrol {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 3;
+    overflow: hidden;
+    background-color:#f5f5f5;
+}
+.custom_zoomcontrol > span {
+    display:flex;
+    width:36px;
+    height:40px;    
+    align-items: center;
+    cursor:pointer;
+    justify-content: center;
+}   
+.custom_zoomcontrol > span > img {
+    width:15px;height:15px;
+    display: flex;
+}
+
+.custom_zoomcontrol span:first-child{
+    border-bottom:1px solid #bfbfbf;
+}    
 
 /* 버튼 */

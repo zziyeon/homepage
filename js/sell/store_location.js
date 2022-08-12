@@ -7,7 +7,7 @@ const $store_location = new kakao.maps.LatLng(35.5351, 129.3108);
 
 const options = { //지도를 생성할 때 필요한 기본 옵션
     center: $store_location, //지도의 중심좌표.
-    level: 3 //지도의 레벨(확대, 축소 정도)
+    level: 2 //지도의 레벨(확대, 축소 정도)
 };
 
 //지도 생성 및 객체 리턴
@@ -23,6 +23,8 @@ const marker = new kakao.maps.Marker({
 
 // 마커가 지도 위에 표시되도록 설정합니다
 marker.setMap(map);
+//마우스 휠로 지도 확대, 축소 금지w
+setZoomable(false);
 
 //인포창 렌더링
 const renderInfowindow = data => {
@@ -59,8 +61,25 @@ naver.maps.Event.addListener(map, 'click', () => {
     });
 });
 
+//지도 중심 좌표로 부드럽게 이동시키기
 function panTo() {
     const moveLatLon = $store_location;
 
     map.panTo(moveLatLon);
+}
+
+// 버튼 클릭에 따라 지도 확대, 축소 기능을 막거나 풀고 싶은 경우에는 map.setZoomable 함수를 사용합니다
+function setZoomable(zoomable) {
+    // 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
+    map.setZoomable(zoomable);    
+}
+
+// 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+function zoomIn() {
+    map.setLevel(map.getLevel() - 1);
+}
+
+// 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+function zoomOut() {
+    map.setLevel(map.getLevel() + 1);
 }
