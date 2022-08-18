@@ -46,12 +46,11 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 .product-info > .p_store span {
-    font-family: 'NanumBarunGothicLight';
+    /* font-family: 'NanumBarunGothicLight'; */
     font-size: 14px;
-    margin-right: 5px;
 }
 
 .product-info > .p_middle > #discount_rate {
@@ -70,7 +69,6 @@ dl {
     display: flex;
     flex: 1 1 0%;
     flex-direction: row;
-    align-items: flex-start;
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -147,6 +145,7 @@ dl>dt {
     width: 700px;
     height: 500px;
     position:relative;
+    outline: 1px solid gray;
     /* overflow:hidden; */
 }
 #map {
