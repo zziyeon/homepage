@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 * {box-sizing: border-box;}
 html, body, div, span, applet, object, iframe,
@@ -16,10 +16,10 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
 	font: inherit;
+	font-size: 100%;
 	vertical-align: baseline;
+	border: 0;
 	box-sizing: border-box;
 }
 h1,h2,h3,h4 {
@@ -40,6 +40,6 @@ ol, ul {
 	list-style: none;
 }
 a {
-  text-decoration: none;
-  color: inherit;
+	color: inherit;
+	text-decoration: none;
 }
