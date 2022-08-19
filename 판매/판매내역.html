@@ -6,14 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 판매내역 | GREATE</title>
-    <link rel="stylesheet" href="/css/common/common.css">
-    <link rel="stylesheet" href="/my/판매내역2.css">
+    <link rel="stylesheet" href="/common/common.css">
+    <link rel="stylesheet" href="/판매/css/판매내역.css">
     <link rel="icon" href="/image/icon.svg">
     <script src="https://kit.fontawesome.com/132ba309f6.js" crossorigin="anonymous"></script>
 
 </head>
-<!-- 점주가 판매하는 모든 상품 정보 -->
-<!-- 당일로 시작하기 -->
+<!-- 현재 고객이 주문한 내역을 받아서 확인하는것. -->
 
 <body>
     <div class="wrapper">
@@ -77,30 +76,38 @@
         <main class="main container">
             <div class="main-side-left">
                 <ul>
-                    <li class="p-manage p-manage-choice">
+                    <li class="p-manage">
                         <h3><a href="/my/상품관리.html">상품 관리</a></h3>
+                    </li>
+                    <li class="p-manage p-manage-choice">
+                        <h3><a href="/my/판매내역.html">판매 내역</a></h3>
                         <i class="fa-solid fa-angle-right"></i>
                     </li>
-                    <li class="p-manage">
-                        <h3><a href="/my/판매내역.html">판매 내역</a></h3>
-                    </li>
                 </ul>
+                <!-- <div class="p-manage">
+                    <h3><a href="/my/상품관리.html">상품 관리</a></h3>
+                </div>
+                <div class="p-manage p-manage-choice">
+                    <h3><a href="/my/판매내역.html">판매 내역</a></h3>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div> -->
             </div>
             <div class="main-side-right">
                 <div class="main-head">
                     <div class="main-title">
                         <i class="bar"></i>
-                        <h2>상품관리</h2>
-                        <span>회원이 판매하는 모든 상품 정보를 확인하실 수 있습니다.</span>
+                        <!-- <img src="/image/판매완료.png" alt=""> -->
+                        <h2>판매내역</h2>
+                        <span>고객과 거래한 내역을 확인하실 수 있습니다.</span>
                     </div>
-                    <img src="/my/상품관리.png" alt="">
+                    <img src="/my/그림3.png" alt="">
                 </div>
                 <div class="order-manage">
                     <div class="order-choice">
                         <div class="drop__period">
                             <input type="date" name="" id="">~<input type="date" name="" id="">
                             <!-- <select name="" id="">
-                                <option value="등록기간" selected disabled>등록기간</option>
+                                <option value="거래기간" selected disabled>거래기간</option>
                                 <option value="전체">전체</option>
                                 <option value="당일">당일</option>
                                 <option value="일주일">일주일</option>
@@ -111,7 +118,6 @@
                             <select name="" id="">
                                 <option value="판매상태" selected disabled>판매상태</option>
                                 <option value="전체">전체</option>
-                                <option value="판매중">판매중</option>
                                 <option value="예약중">예약중</option>
                                 <option value="판매완료">판매완료</option>
                             </select>
@@ -120,52 +126,73 @@
                     <div class="ordered-list">
                         <table>
                             <tr class="table_header">
-                                <th>No.</th>
-                                <th>사진</th>
-                                <th>판매상태</th>
+                                <th>주문번호</th>
+                                <th>주문일시</th>
+                                <th>구매자</th>
                                 <th>상품명</th>
-                                <th>가격</th>
                                 <th>수량</th>
-                                <th>등록일</th>
-                                <th>기능</th>
+                                <th>총주문액</th>
+                                <th>픽업시간</th>
+                                <th>결제 유형</th>
+                                <th>주문 상태</th>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td><img src="https://media.istockphoto.com/photos/fresh-strawberry-cake-with-cream-in-close-up-picture-id1316260838?b=1&k=20&m=1316260838&s=170667a&w=0&h=tVFyqbMds3BXZP5AyAV3xxvcKKng59gxLkLSoFEZRDM="
-                                        alt=""></td>
-                                <td>
-                                    <select name="" id="">
-                                        <option value="판매중">판매중</option>
-                                        <option value="예약중">예약중</option>
-                                        <option value="삭제">삭제</option>
-                                        <option value="판매완료">판매완료</option>
-                                    </select>
-                                </td>
-                                <td>딸기케이크</td>
-                                <td><span>4,500</span>원</td>
-                                <td><span>2</span>/<span>3</span>개</td>
+                                <td><span>a000001</span></td>
                                 <td><span>2022-08-03</span></td>
-                                <td><button>수정</button></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td><img src="https://media.istockphoto.com/photos/scone-picture-id1311079135?b=1&k=20&m=1311079135&s=170667a&w=0&h=OHHcrTrnNC5gYZpPmhAvctr5b_YXT4DWcivjcAsg8iI="
-                                        alt=""></td>
+                                <td><span>콘</span></td>
+                                <td><a href=""><span>딸기케이크</span></a></td>
+                                <td><span>2</span>개</td>
+                                <td><span>13,000</span>원</td>
+                                <td><span>18:50</span></td>
+                                <td>온라인 결제</td>
                                 <td>
                                     <select name="" id="">
-                                        <option value="판매중">판매중</option>
                                         <option value="예약중">예약중</option>
-                                        <option value="삭제">삭제</option>
                                         <option value="판매완료">판매완료</option>
                                     </select>
                                 </td>
-                                <td>플레인스콘</td>
-                                <td><span>4,500</span>원</td>
-                                <td><span>3</span>/<span>5</span>개</td>
-                                <td><span>2022-08-05</span></td>
-                                <td><button>수정</button></td>
+                            </tr>
+                            <tr>
+                                <td><span>a000035</span></td>
+                                <td><span>2022-08-02</span></td>
+                                <td><span>뚜비</span></td>
+                                <td><a href=""><span>플레인스콘</span></a></td>
+                                <td><span>1</span>개</td>
+                                <td><span>6,500</span>원</td>
+                                <td><span>17:30</span></td>
+                                <td>온라인</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="예약중">예약중</option>
+                                        <option value="판매완료">판매완료</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span>a000431</span></td>
+                                <td><span>2022-07-02</span></td>
+                                <td><span>뚝이아</span></td>
+                                <td><a href=""><span>버블티</span></a></td>
+                                <td><span>1</span>개</td>
+                                <td><span>5,800</span>원</td>
+                                <td><span>20:10</span></td>
+                                <td>현장 결제</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="예약중">예약중</option>
+                                        <option value="판매완료" selected>판매완료</option>
+                                    </select>
+                                </td>
                             </tr>
                         </table>
+                        <div class="page-move-btn">
+                            <a href="#"><</a>
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">></a>
+                        </div>
                     </div>
                 </div>
             </div>
