@@ -38,7 +38,7 @@ th {
 }
 label {
     display: inline-block;
-    width: 110px;
+    width: 100px;
 }
 td {
     padding: 6px;
@@ -46,7 +46,7 @@ td {
 }
 input, select {
     display: inline-block;
-    width: 160px;
+    width: 190px;
     height: 32px;
 }
 #title {
