@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+/* * {outline: 1px solid black;} */
+
+  /* main */
+.main {
+  display:block;
+  margin: auto;
+  padding: 1rem 0px 1.5rem;
+}
+
+.main > .title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin : 20px 0px;
+  width: 100%;
+}
+.main > .title > ul {
+  position: relative;
+
+}
+.main > .title > ul > .food-category>ul {
+  display: none;
+}
+.main > .title > ul > .food-category:hover>ul {
+  display: block;
+  position: absolute;
+  background-color: aliceblue;
+  z-index: 3;
+}
+
+.main > .main-left-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-left > ul{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.main-left > ul > li{
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  outline: 1px solid gray;
+  margin-right: 15px;
+
+
+}
+
+.main-left > ul > li:hover {
+  background-color: rgba(226, 226, 183, 0.267);
+}
+
+/* .main-right {
+  flex: 6;
+} */
+
+.main > .main-left-right > .main-right > .items {
+  display : flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+}
+
+.main > .main-left-right > .main-right > .items > .item {
+  display : flex;
+  flex-direction: column;
+  width: 260px;
+  /* margin : 0px 16px 16px 0; */
+  overflow: hidden;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.main > .main-left-right > .main-right > .items > .item:hover {
+  display : flex;
+  flex-direction: column;
+  width: 260px;
+  /* margin : 10px 15px; */
+  /* overflow: hidden; */
+  border-radius: 8px;            
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.664);
+}
+
+.main > .main-left-right > .main-right > .items > .item > .item__image > img {
+  width: 100%;
+  height:250px;
+}
+
+.main > .main-left-right > .main-right > .items > .item > .item__title {
+  text-align: center;
+}
+
+.main > .main-left-right > .main-right > .items > .item > .item__price-box {
+  display : flex;
+  justify-content: center;
+}
+
+.main > .main-left-right > .main-right > .items > .item > .item__price-box > .item__discount-rate {
+  color:red;
+  margin-right: 10px;
+}
+
+.main > .main-left-right > .main-right > .items > .item > .item__time-box {
+  display : flex;
+  justify-content: center;
+}
+
+.main > .main-left-right > .main-right > .items > .item > .item__time-box > .item__magam {
+  margin-right: 10px;
+}
+
+.main > .main-left-right > .main-right > .items > .item > .item__time-box > .item__time {
+  color : rgb(241, 196, 15);
+}
