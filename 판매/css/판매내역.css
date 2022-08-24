@@ -111,6 +111,17 @@ h3 {
     font-size: 20px;
 }
 
+.order-choice .drop__period button {
+    width: 50px;
+    height: 28px;
+    /* border-radius: 3px; */
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 0;
+    margin-left: 5px;
+    /* border: navajowhite; */
+}
+
 .order-choice .drop__status {
     display: flex;
     align-items: center;
@@ -120,7 +131,7 @@ h3 {
 
 .order-choice>.drop__period > input{
     width: 150px;
-    height: 35px;
+    height: 33px;
 }
 
 .order-choice>.drop__period > input:focus {
@@ -129,7 +140,7 @@ h3 {
 
 .order-choice select {
     width: 100%;
-    height: 35px;
+    height: 33px;
     font-size: 15px;
 }
 
