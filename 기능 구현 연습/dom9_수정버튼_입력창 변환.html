@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>댓글 수정버튼_입력창</title>
+    <title>첨부파일추가</title>
     <style>
-        /* * {outline:1px solid red;} */
-
         ul {
             margin: 0;
             padding: 0
@@ -56,27 +54,12 @@
 <body>
     <div id="container">
         <div class="wrap">
-            <label for="" class="title">댓글작성 </label>
-            <textarea class="comment" name="" id="" cols="30" rows="3" placeholder="댓글입력(300자 미만)"></textarea>
-            <button class="btn btn__write">등록</button>
+            <label for="" class="title">파일첨부 </label>
+            <input type="file" multiple>
+            <button class="btn add">추가</button>
         </div>
         <div class="comment__list">
             <ul class="comments">
-                <!-- <div class="comment__item-wrap">
-                    <li class="comment__item">댓글1</li>
-                    <button class="btn btn__del">삭제</button>
-                    <button class="btn btn__modify">수정</button>
-                </div>
-                <div class="comment__item-wrap">
-                    <li class="comment__item">댓글2</li>
-                    <button class="btn btn__del">삭제</button>
-                    <button class="btn btn__modify">수정</button>
-                </div>
-                <div class="comment__item-wrap">
-                    <li class="comment__item">댓글3</li>
-                    <button class="btn btn__del">삭제</button>
-                    <button class="btn btn__modify">수정</button>
-                </div> -->
             </ul>
         </div>
     </div>

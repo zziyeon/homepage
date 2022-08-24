@@ -123,6 +123,10 @@ h3 {
     height: 35px;
 }
 
+.order-choice>.drop__period > input:focus {
+    outline: none;
+}
+
 .order-choice select {
     width: 100%;
     height: 35px;
@@ -196,7 +200,7 @@ sell_list-tb > tbody > td:nth-child(9){
 }
 
 select {
-    width: 100px;
+    width: 99px;
     height: 30px;
 }
 
