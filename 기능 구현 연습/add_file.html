@@ -45,15 +45,15 @@
 
 
     <script>
-        var fileNo = 0;
-        var filesArr = new Array();
+        let fileNo = 0;
+        const filesArr = new Array();
 
         /* 첨부파일 추가 */
         function addFile(obj) {
-            var maxFileCnt = 5;   // 첨부파일 최대 개수
-            var attFileCnt = document.querySelectorAll('.filebox').length;    // 기존 추가된 첨부파일 개수
-            var remainFileCnt = maxFileCnt - attFileCnt;    // 추가로 첨부가능한 개수
-            var curFileCnt = obj.files.length;  // 현재 선택된 첨부파일 개수
+            const maxFileCnt = 5;   // 첨부파일 최대 개수
+            const attFileCnt = document.querySelectorAll('.filebox').length;    // 기존 추가된 첨부파일 개수
+            let remainFileCnt = maxFileCnt - attFileCnt;    // 추가로 첨부가능한 개수
+            let curFileCnt = obj.files.length;  // 현재 선택된 첨부파일 개수
 
             // 첨부파일 개수 확인
             if (curFileCnt > remainFileCnt) {
@@ -63,14 +63,14 @@
                     // 첨부파일 검증
                     if (validation(file)) {
                         // 파일 배열에 담기
-                        var reader = new FileReader();
+                        const reader = new FileReader();
                         reader.onload = function () {
                             filesArr.push(file);
                         };
                         reader.readAsDataURL(file);
 
                         // 목록 추가
-                        let htmlData = '';
+                        const htmlData = '';
                         htmlData += '<div id="file' + fileNo + '" class="filebox">';
                         htmlData += '   <p class="name">' + file.name + '</p>';
                         htmlData += '   <a class="delete" onclick="deleteFile(' + fileNo + ');"><i class="fa-solid fa-minus"></i></a>';

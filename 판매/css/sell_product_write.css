@@ -15,7 +15,6 @@ h2 {
 }
 
 .main >.p-write-info {
-    /* background-color: yellow; */
     outline: 2px solid black;
     border-radius: 10px;
     padding: 20px;
@@ -28,13 +27,6 @@ h2 {
 th {
     font-weight: bold;
     vertical-align: middle;   
-    /* display: flex; */
-    /* flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-     */
 }
 label {
     display: inline-block;

@@ -111,15 +111,17 @@ h3 {
     font-size: 20px;
 }
 
+/* 주문기간 조회 Btn */
 .order-choice .drop__period button {
     width: 50px;
     height: 28px;
-    /* border-radius: 3px; */
+    border-radius: 4px;
     font-size: 12px;
     letter-spacing: 1px;
     padding: 0;
     margin-left: 5px;
-    /* border: navajowhite; */
+    border: none;
+    background-color: rgba(255, 234, 113, 0.445);
 }
 
 .order-choice .drop__status {

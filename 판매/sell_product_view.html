@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="top">
         <!-- header -->
         <header class="header container">
             <nav class="top-menu content">
@@ -66,6 +66,10 @@
                     <a href="" class="search__search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
             </nav>
+            <!-- top버튼 -->
+            <div class="topbtn">
+                <a href="#top"><i class="fa-solid fa-angles-up"></i></a>
+            </div>
         </header>
         <!-- //header -->
 
@@ -147,9 +151,11 @@
                 </div>
             </article>
 
+            
+
             <!-- nav -->
             <div class="tab-nab">
-                <div class="nav_tab" contentEditable="true">
+                <div class="nav_tab">
                     <a href="#s">
                         <span>상품소개</span>
                     </a>
@@ -168,11 +174,13 @@
 
             <!-- 정보 -->
             <div class="goods_wrap">
-                <div class="goods_info">
+                <div class="goods_info" id="s">
+                    <h4>상품정보</h4>
+                    <hr>
                     <div>
                         <img src="" alt="">
                     </div>
-                    <div class="contenxt" id="s">
+                    <div class="contenxt" >
                         <p >달콤한 달기와 </p>
                         <p>마감시간 9시 전까지 와서 할인된 가격에포장하실 분 거래주세요.</p>
                         <p>매일13시간 끓여 만든 육수, 신선한 재료</p>
@@ -181,8 +189,9 @@
                     </div>
                 </div>
                 <!-- 가게 위치 지도 -->
-                <div class="store_location">
-                    <span id="ss"> 해당 가게 위치</span>
+                <div class="store_location" id="ss">
+                    <span > 해당 가게 위치</span>
+                    <hr>
                     <span >싸다구 디저트들</span>
                     <!-- 가게 위치 지도로 표시-->
                     <div id="map"> </div>
@@ -206,6 +215,7 @@
 
             <!-- 댓글부분 -->
             <!-- <div class="comment width--900px">
+
 
                 <div class="comment__title">
                     <span><i class="fa-regular fa-comments"></i></span>
@@ -369,23 +379,26 @@
                     </div>
                 </div>
             </div> -->
-    </div>
-    <!-- //댓글부분 -->
+    
+    
+    
+        
+            <!-- //댓글부분 -->
 
-    <!-- 버튼 -->
-    <div class="product_page_btn">
-        <button class="btn_del btn">삭제</button>
-        <button class="btn_modify btn">수정</button>
-        <button class="btn_list btn">목록</button>
-    </div>
-    </main>
-    <!-- //main -->
+            <!-- 버튼 -->
+            <div class="product_page_btn">
+                <button class="btn_del btn">삭제</button>
+                <button class="btn_modify btn">수정</button>
+                <button class="btn_list btn">목록</button>
+            </div>
+        </main>
+        <!-- //main -->
 
-    <!-- footer -->
-    <footer class="footer container">
-        <p class="content"></p>
-    </footer>
-    <!-- //footer -->
+        <!-- footer -->
+        <footer class="footer container">
+            <p class="content"></p>
+        </footer>
+        <!-- //footer -->
     </div>
 
 </body>
