@@ -28,27 +28,67 @@
   justify-content: center;
   flex-direction: row;
   margin-bottom: 30px;
+  /* font-family: 'NanumBarunGothicLight'; */
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .food-type > ul > li{
-  width: 80px;
+  width: 70px;
   height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 30px;
-  outline: 1px solid gray;
-  margin-right: 15px;
+  border-radius: 50px;
+  outline: 1px solid var(--mainBtn-color-gre);
+  margin-right: 20px;
 }
 
 .food-type > ul > #food-type_selected {
-  background-color: pink;
+  background-color: var(--main-color-yel);
+  outline: none;
 }
 
 .food-type> ul > li:hover {
   background-color: rgba(226, 226, 183, 0.267);
 }
 /* //main 업종 카테고리 */
+
+/* 정렬 방법 */
+.view_array {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.main > .view_array > .view_array-type > ul {
+  display: flex;
+}
+
+.main > .view_array > .view_array-type > ul >li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 24px;
+  margin-left: 8px;
+  color: var(--main-text-gre);
+}
+
+.main > .view_array > .view_array-type > ul >li:nth-child(1):before {
+  display: none;
+}
+
+.main > .view_array > .view_array-type > ul >li::before {
+  content: "";
+  display: flex;
+  width: 1px;
+  height: 10px;
+  margin-right: 10px;
+  background-color: var(--main-text-gre);
+}
+
+/* //정렬 방법 */
 
 /* main 리스트들 */
 .main > .items {
