@@ -153,7 +153,7 @@ dl>dt {
     height: 600px;
     position:relative;
     /* outline: 1px solid gray; */
-    /* overflow:hidden; */
+    overflow:hidden;
 }
 
 #map {

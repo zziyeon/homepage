@@ -21,11 +21,11 @@
 
 /* header */
 .header {
-  /* ====================================== */
-  position: sticky;
-  top: -30px;         /* top-menu는 안보이게*/
+  /* =======      헤더 고정       =============== */
+  /* position: sticky;
+  top: -30px;         
   background-color: white;
-  z-index: 3;
+  z-index: 3; */
   /* ====================================== */
   display: flex;
   margin: auto;
@@ -36,16 +36,14 @@
   max-width: 1900px;
   border-bottom: 2px solid var(--main-color-gre);
 }
-  /* ====================================== */
+
   /* top버튼 */
 .topbtn {
   position: fixed;
   bottom: 50px;
   right: 50px;
-  /* border-radius: 50%; */
   font-size: 20px;
 }
-  /* ====================================== */
 
 /* 로그인 | 회원가입 */
 .top-menu {
@@ -154,10 +152,6 @@
   border: none;
   height: 100%;
   margin-left: 5px;
-}
-
-.bottom-menu > .search .search__search-box:focus {
-  outline: none;
 }
 
 .bottom-menu > .search .search__search-icon {

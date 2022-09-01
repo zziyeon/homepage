@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/common/common.css">
-    <link rel="stylesheet" href="/판매/css/전체보기.css">
+    <link rel="stylesheet" href="/메인/css/main.css">
     <script src="https://kit.fontawesome.com/132ba309f6.js" crossorigin="anonymous"></script>
 
     <link rel="icon" href="/image/icon.svg">        <!-- 탭 아이콘 변경 -->
-    <title>전체 상품 | GREAT</title>
+    <title>GREAT</title>
 </head>
 
 <body>
@@ -22,25 +22,13 @@
                 <a href="/html/member/login.html" class="top-menu__login">로그인</a>
                 <a href="" class="top-menu__cs">고객센터</a>
             </nav>
-            <div class="logo content"><a href="/html/no_mem_main.html">GR<span>EAT</span></a></div>
+            <div class="logo content"><a href="/메인/비회원.html">GR<span>EAT</span></a></div>
             <nav class="bottom-menu content">
                 <div class="category">
                     <ul>
-                        <li class="food-category">업종별 카테고리
+                        <li class="region-category"> 지역 선택&nbsp;&nbsp;<i class="fa-solid fa-chevron-down"> </i>
                             <ul>
-                                <li><a href="">한식</a></li>
-                                <li><a href="">중식</a></li>
-                                <li><a href="">일식</a></li>
-                                <li><a href="">양식</a></li>
-                                <li><a href="">아시안식</a></li>
-                                <li><a href="">분식</a></li>
-                                <li><a href="">도시락</a></li>
-                                <li><a href="">카페/디저트</a></li>
-                            </ul>
-                        </li>
-                        <li class="region-category">지역별 카테고리
-                            <ul>
-                                <li><a href="">남구</a></li>
+                                <li><a href="/판매/남구_전체.html">남구</a></li>
                                 <li><a href="">동구</a></li>
                                 <li><a href="">중구</a></li>
                                 <li><a href="">북구</a></li>
@@ -50,30 +38,54 @@
                     </ul>
                 </div>
                 <div class="search">
-                    <input type="text" class="search__search-box" placeholder="  검색어를 입력하세요.">
+                    <input type="text" class="search__search-box" placeholder="검색어를 입력하세요.">
                     <a href="" class="search__search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
             </nav>
+            <!-- top버튼 -->
+            <div class="topbtn">
+                <a href="#top"><i class="fa-solid fa-angles-up"></i></a>
+            </div>
         </header>
         <!-- //header -->
 
-        <!-- main -->
-        <main class="main container">
-            <section class="title content">전체 상품</section>
-            <div class="view_array">
-                <div class="view_array-total">총<span>8</span>건</div>
-                <div class="view_array-type">
-                    <ul>
-                        <li><a href="">마감 긴박순</a></li>
-                        <li><a href="">높은 할인순</a></li>
-                        <li><a href="">낮은 가격순</a></li>
-                        <li><a href="">높은 가격순</a></li>
-                    </ul>
+        <!-- figure -->
+        <figure class="figure container">
+            <div class="slideshow-container">
+                <div class="banner fade">
+                    <img src="/image/그림2.png" alt="">
+                </div>
+                <div class="banner fade">
+                    <img src="/image/배너2.png" alt="">
+                </div>
+                <div class="banner fade">
+                    <img class="ss" src="/image/배너3.png" alt="">
+                </div>
+                <div class="banner fade">
+                    <img src="/image/배너4.png" alt="">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <br>
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
                 </div>
             </div>
+        </figure>
+        <!-- //figure -->
+
+        <!-- main -->
+        <main class="main container">
+            <section class="title content">오늘의 마감 할인!</section>
             <section class="items content">
                 <div class="item">
-                    <a href="/판매/sell_product_view.html" class="item__image"><img src="https://cdn.pixabay.com/photo/2016/10/27/22/12/cakes-1776661__340.jpg" alt=""></a>
+                    <a href="" class="item__image"><img src="https://cdn.imweb.me/thumbnail/20210628/f9482d3bbe416.jpg"
+                            alt=""></a>
                     <a href="#" class="item__title">딸기 케이크 <i id="heart" class="fa-solid fa-heart"></i></a>
                     
                     <div class="item__price-box">
@@ -191,6 +203,7 @@
                     </div>
                 </div>
             </section>
+            <section class="view-all content"><a href="/판매/no_mem_전체상품보기.html">전체보기</a></section>
         </main>
         <!-- //main -->
 
