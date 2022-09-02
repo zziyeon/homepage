@@ -101,12 +101,13 @@
 
 .main > .items > .item {
   display : flex;
+  position: relative;
   flex-direction: column;
   width: 260px;
-  /* margin : 0px 16px 16px 0; */
   overflow: hidden;
   border-radius: 8px;
   font-size: 16px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .main > .items > .item:hover {
@@ -128,14 +129,38 @@
   text-align: center;
 }
 
+.main > .items > .item > .heart_Btn {
+  width: 45px;
+  height: 45px;  
+  position: absolute;
+  bottom: 90px;
+  right: 20px;
+
+  z-index: 3;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  
+}
+
 .main > .items > .item > .item__price-box {
   display : flex;
   justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
 
 .main > .items > .item > .item__price-box > .item__discount-rate {
   color:red;
   margin-right: 10px;
+}
+
+.main > .items > .item > .item__price-box > .item__price--normal {
+  color: var(--main-text-gre);
+  margin-left: 8px;
+  text-decoration: line-through;
+  font-size: 12px;
+  font-weight: lighter;
 }
 
 .main > .items > .item > .item__time-box {

@@ -24,38 +24,24 @@
         <!-- header -->
         <header class="header container">
             <nav class="top-menu content">
-                <!-- <a href="#" class="top-menu__member">회원</a> -->
                 <li class="top-menu__member">어피치 님
                     <ul>
-                        <li><a href="/판매/sell_product_write.html">판매글 작성</a></li>
+                        <li><a href="/판매/product_write.html">판매글 작성</a></li>
                         <li><a href="#">판매 내역</a></li>
                         <li><a href="#">판매 정보</a></li>
                         <li><a href="#">판매 목록</a></li>
                         <li><a href="#">내 프로필</a></li>
                         <li><a href="/html/member/myinfo.html">개인정보</a></li>
-                        <li><a href="/html/no_mem_main.html">로그아웃</a></li>
+                        <li><a href="/메인/비회원.html">로그아웃</a></li>
                     </ul>
                 </li>
-
                 <a href="" class="top-menu__cs">고객센터</a>
             </nav>
-            <div class="logo content"><a href="/html/mem_main.html">GR<span>EAT</span></a></div>
+            <div class="logo content"><a href="/메인/점주회원.html">GR<span>EAT</span></a></div>
             <nav class="bottom-menu content">
                 <div class="category">
                     <ul>
-                        <li class="food-category">업종별 카테고리
-                            <ul>
-                                <li><a href="">한식</a></li>
-                                <li><a href="">중식</a></li>
-                                <li><a href="">일식</a></li>
-                                <li><a href="">양식</a></li>
-                                <li><a href="">아시안식</a></li>
-                                <li><a href="">분식</a></li>
-                                <li><a href="">도시락</a></li>
-                                <li><a href="">카페/디저트</a></li>
-                            </ul>
-                        </li>
-                        <li class="region-category">지역별 카테고리
+                        <li class="region-category"> 지역 선택&nbsp;&nbsp;<i class="fa-solid fa-chevron-down"></i>
                             <ul>
                                 <li><a href="">남구</a></li>
                                 <li><a href="">중구</a></li>
@@ -70,7 +56,11 @@
                     <input type="text" class="search__search-box" placeholder="검색어를 입력하세요.">
                     <a href="" class="search__search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
-            </nav>
+            </nav>            
+            <!-- top버튼 페이지 오른쪽 하단에 위치함 -->
+            <div class="topbtn">
+                <a href="#top"><i class="fa-solid fa-angles-up"></i></a>
+            </div>
         </header>
         <!-- //header -->
 
@@ -94,20 +84,13 @@
                         <h2>상품관리</h2>
                         <span>회원이 판매하는 모든 상품 정보를 확인하실 수 있습니다.</span>
                     </div>
-                    <img src="/my/상품관리.png" alt="">
+                    <img src="/판매/img/상품관리.png" alt="">
                 </div>
                 <div class="order-manage">
                     <div class="order-choice">
                         <div class="drop__period">
                             <input type="date" name="" id="">~<input type="date" name="" id="">
                             <button>조회</button>
-                            <!-- <select name="" id="">
-                                <option value="등록기간" selected disabled>등록기간</option>
-                                <option value="전체">전체</option>
-                                <option value="당일">당일</option>
-                                <option value="일주일">일주일</option>
-                                <option value="한달">한달</option>
-                            </select> -->
                         </div>
                         <div class="drop__status">
                             <select name="" id="">
@@ -180,8 +163,5 @@
         </footer>
         <!-- //footer -->
     </div>
-
 </body>
-
-
 </html>

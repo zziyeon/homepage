@@ -6,6 +6,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  overflow: hidden;
+  min-width: 1200px;
 }
 
 .wrapper > .container > .content {
