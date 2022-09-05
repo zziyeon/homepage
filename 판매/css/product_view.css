@@ -1,17 +1,7 @@
 @charset "UTF-8";
 
-* {
-    /* outline: 1px solid rosybrown; */
-}
+/* * { outline: 1px solid rosybrown; } */
 
-/* article */
-/* article {
-    display: flex;
-} */
-/* .main, dt, dl {
-    margin: 0;
-    padding: 0;
-} */
 .main {
     width: 1100px;
     display: flex;
@@ -23,7 +13,7 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    
+
     margin-bottom: 50px;
 }
 
@@ -31,39 +21,46 @@
 .product-img {
     width: 350px;
     height: 400px;
-    /* background: url("https://cdn.pixabay.com/photo/2016/04/14/17/01/soup-1329266__340.jpg") 50% 0%; */
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     object-fit: cover;
 }
+
+.product-img>img {}
 
 /* 판매 정보(오른쪽) */
 .product-info {
     width: 500px;
 }
-.product-info > .p_store  {
+
+.product-info>.p_store {
     display: flex;
     align-items: center;
 }
 
-.product-info > .p_store  .store-profile .store-profile_img {
+.product-info>.p_store .store-profile .store-profile_img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin-right: 15px;
 }
-.product-info > .p_store span {
+
+.product-info>.p_store span {
     /* font-family: 'NanumBarunGothicLight'; */
     font-size: 14px;
 }
 
-.product-info > .p_middle > #discount_rate {
+.product-info>.p_middle>#discount_rate {
     color: rgb(235, 19, 3);
     font-weight: bold;
     font-size: 20px;
 }
 
-.product-info > .p_middle_bottom  {
+.product-info>.p_middle_bottom {
     text-decoration: line-through;
-    color: rgb(167, 167, 167);
+    color: var(--main-text-gre);
     font-size: 14px;
 }
 
@@ -75,11 +72,14 @@ dl {
     width: 100%;
     height: 100%;
     border-top: 1px solid rgb(244, 244, 244);
-    font-size: 14px;
+    font-size: 15px;
     margin-block-start: 1em;
-    margin-block-end: 1em;
+    /* margin-block-end: 0em; */
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    /* --------------------------------------- */
+    padding-top: 15px;
+    margin-bottom: 15px;
 }
 
 dl>dt {
@@ -87,32 +87,24 @@ dl>dt {
     top: 1px;
     width: 128px;
     height: 100%;
-    line-height: 19px;
+    /* line-height: 19px; */
 }
-.count_btn {
-    border: 1px solid gray;
-    border-radius: 15px;
-    padding: 5px;
-}
-.count_btn > .minus_btn,.plus_btn {
-    width: 15px;
-    height: 20px;
+
+.product-info > .product-btn > button {
+    height: 33px;    
+    font-weight: bold;    
     border: none;
-}
-.product-info>.product-btn button{
-    height: 45px;
-    border: 0;
     border-radius: 8px;
 }
-.product-info>.product-btn > .product-btn--like {
+
+.product-info > .product-btn > .product-btn--like {
     width: 50px;
     font-size: 20px;
 }
 
-.product-info>.product-btn > .product-btn--buy {
+.product-info > .product-btn > .product-btn--buy {
     width: 300px;
     background-color: var(--main-color-yel);
-    font-weight: bold;
 }
 
 /* nav */
@@ -142,18 +134,19 @@ dl>dt {
 }
 
 /* 상품 정보 */
-.goods_wrap > .goods_info {
+.goods_wrap>.goods_info {
     height: 800px;
     text-align: center;
 
 }
+
 /* 지도 */
 .store_location {
     width: 700px;
     height: 600px;
-    position:relative;
+    position: relative;
     /* outline: 1px solid gray; */
-    overflow:hidden;
+    overflow: hidden;
 }
 
 #map {
@@ -162,37 +155,49 @@ dl>dt {
 }
 
 .radius_border {
-    border:1px solid #919191;
-    border-radius:5px;
-}  
+    border: 1px solid #919191;
+    border-radius: 5px;
+}
 
-.store_location > .custom_zoomcontrol {
+.store_location>.custom_zoomcontrol {
     position: absolute;
     top: 80px;
     right: 10px;
     z-index: 2;
     overflow: hidden;
-    background-color:#f5f5f5;
+    background-color: #f5f5f5;
 }
-.custom_zoomcontrol > span {
-    display:flex;
-    width:36px;
-    height:40px;    
+
+.custom_zoomcontrol>span {
+    display: flex;
+    width: 36px;
+    height: 40px;
     align-items: center;
-    cursor:pointer;
+    cursor: pointer;
     justify-content: center;
-}   
-.custom_zoomcontrol > span > img {
-    width:15px;
-    height:15px;
+}
+
+.custom_zoomcontrol>span>img {
+    width: 15px;
+    height: 15px;
     display: flex;
 }
 
-.custom_zoomcontrol span:first-child{
-    border-bottom:1px solid #bfbfbf;
-}    
+.custom_zoomcontrol span:first-child {
+    border-bottom: 1px solid #bfbfbf;
+}
 
 /* 버튼 */
-.product_page_btn {
+.main>.goods_wrap>.product_page_btn {
     display: flex;
+    justify-content: space-between;
+}
+
+.product_page_btn .btn {
+    width: 60px;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    margin: 0 3px;
 }
