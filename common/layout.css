@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* * {outline: 1px solid sandybrown;} */
+
 /* 비율 */
 .wrapper {
     display: flex;
@@ -25,9 +27,9 @@
 .header {
     /* =======      헤더 고정       =============== */
     /* position: sticky;
-  top: -30px;         
-  background-color: white;
-  z-index: 3; */
+    top: -30px;         
+    background-color: white;
+    z-index: 3; */
     /* ====================================== */
     display: flex;
     margin: auto;
@@ -55,18 +57,38 @@
     font-size: 12px;    
 }
 
+.top-menu > a {
+    /* width: 100px; */
+    display: flex;
+    align-items: center;
+}
+
+.top-menu > a::after {
+    content: "";  
+    display: flex;
+    width: 0.8px;
+    height: 12px;
+    margin: 0 8px;
+    background-color: var(--main-text-gre);
+}
+
+.top-menu > a:nth-last-child(1):after {
+    display: none;
+}
+
 .top-menu > .top-menu__member {
     width: 70px;
-    text-align: center;
+    /* text-align: center; */
     display: flex;
+    justify-content: center;
 }
 
 .top-menu > .top-menu__member::after {
-    content: "";
+    content: "";  
     display: flex;
-    width: 1px;
+    width: 0.8px;
     height: 15px;
-    margin-left: 10px;
+    margin:0 6px;
     background-color: var(--main-text-gre);
 }
 
@@ -74,22 +96,11 @@
     display: none;
     position: absolute;
     top: 27px;
-    padding: 5px;
+    padding: 5px 0;
     width: 95px;
     text-align: center;
     background-color: white;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-}
-
-.top-menu>.top-menu__member > ul > li:nth-child(4) {
-    background-color: yellow;
-}
-
-.top-menu>.top-menu__member > ul > li:nth-child(4)::after {
-    content: "";
-    width: 30px;
-    height: 10px;
-    background-color: black;
 }
 
 .top-menu>.top-menu__member:hover ul {
@@ -97,17 +108,22 @@
 }
 
 .top-menu>.top-menu__member > ul > li {
-    height: 22px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
-
-.top-menu a {
-    margin-left: 10px;
+.top-menu>.top-menu__member > ul > li:hover {
+    width: 100%;
+    background-color: #eee;
+    transition: all 0.5s;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 
 .top-menu a:hover {
-    margin-left: 10px;
     font-size: 12px;
-    border-radius: 8px;
     background-color: #eee;
     transition: all 0.5s;
 }
@@ -137,6 +153,11 @@
     position: relative;
     width: 140px;
     height: 35px;
+    /* ----------------------------------------- */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* ----------------------------------------- */
 }
 
 .bottom-menu>.category>ul>li>ul {
@@ -197,7 +218,6 @@
 
     /* ----------------------------------- */
     justify-content: center;
-    outline: 1px solid black;
     padding: 20px;
     /* ----------------------------------- */
 }

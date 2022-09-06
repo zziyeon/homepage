@@ -6,7 +6,7 @@
 .main {
   display:block;
   margin: auto;
-  padding: 1rem 0px 1.5rem;
+  padding: 1rem 0px 10rem;
 }
 
 .main > .title {
@@ -88,8 +88,6 @@
   background-color: var(--main-text-gre);
 }
 
-/* //정렬 방법 */
-
 /* main 리스트들 */
 .main > .items {
   display : flex;
@@ -130,17 +128,19 @@
 }
 
 .main > .items > .item > .heart_Btn {
-  width: 45px;
-  height: 45px;  
+  width: 35px;
+  height: 35px;  
   position: absolute;
   bottom: 90px;
-  right: 20px;
+  right: 12px;
   z-index: 3;
-
-  background-color: white;
+  border: none;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.6);
+  /* background-color: rgba(255, 255, 255, 0); */
   border-radius: 50%;
-  text-align: center;
-  
+  padding-top: 5px;
+  text-align: center;  
 }
 
 .main > .items > .item > .item__price-box {
@@ -174,4 +174,24 @@
 
 .main > .items > .item > .item__time-box > .item__time {
   color : rgb(241, 196, 15);
+}
+
+
+.main > .view-all {
+  display:flex;
+  justify-content: end;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+/* .main > .view-all a {
+  margin-right:35px;
+} */
+
+.main > .view-all a:hover {
+  /* margin-right:35px; */
+  background-color: #eee;
+  border-radius: 8px;
+  margin-left : 10px;
+  transition: all 0.5s;
 }
