@@ -26,10 +26,10 @@
 /* header */
 .header {
     /* =======      헤더 고정       =============== */
-    /* position: sticky;
+    position: sticky;
     top: -30px;         
     background-color: white;
-    z-index: 3; */
+    z-index: 3;
     /* ====================================== */
     display: flex;
     margin: auto;

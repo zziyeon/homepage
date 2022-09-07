@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* position: relative; */
+    padding: 1rem 0px 5rem;
 }
 
 .product {
@@ -84,7 +84,7 @@ dl {
     margin-bottom: 15px;
 }
 
-dl>dt {
+dl > dt {
     position: relative;
     top: 1px;
     width: 128px;
@@ -92,12 +92,6 @@ dl>dt {
     font-weight: bold;
     /* line-height: 19px; */
 }
-
-/* dl>dt::after {
-    content: "";
-    width: 0.8px;
-    color: black;
-} */
 
 .product-info > .product-btn > button {
     height: 35px;    
@@ -119,10 +113,10 @@ dl>dt {
 /* nav */
 .tab-nab {
     /* =============================== */
-    /* position: sticky;
+    position: sticky;
     top: 126px;
     background-color: white;
-    z-index: 3; */
+    z-index: 3;
     /* =============================== */
     display: flex;
     /* width: 900px; */
@@ -153,7 +147,7 @@ dl>dt {
 /* 지도 */
 .store_location {
     width: 700px;
-    height: 600px;
+    height: 640px;
     position: relative;
     /* outline: 1px solid gray; */
     overflow: hidden;
@@ -197,10 +191,12 @@ dl>dt {
     border-bottom: 1px solid #bfbfbf;
 }
 
+
 /* 버튼 */
 .main>.goods_wrap>.product_page_btn {
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 .product_page_btn .btn {
