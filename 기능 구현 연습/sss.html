@@ -6,31 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .aaaa {
-            resize: none;
-            height: 300px;
-        }
-        .ssss {
-            background-color: yellow;
-            position: sticky;
-            top: 260px;
-        }
-        body {
-            height: 3000px;
-        }
 
+html,
+    body {
+        margin: 0;
+    }
+
+    .header {
+        height: 80px;
+        background: burlywood;
+    }
+
+    .container {
+        display: flex; 
+        flex-flow: row nowrap;
+    }
+
+    .content {
+        width: 80%;
+        height: 800px; 
+        background: #f5f5f5;
+    }
+
+    .s {
+        height: 900px;
+        background-color: yellow;
+    }
+    .s > .sidebar {
+        width: 20%;
+        height: 400px; 
+        position: sticky;
+        top: 0;
+        background: yellowgreen;
+    }
+
+    .footer {
+        background: #333;
+        height: 200px;
+    }
     </style>
 </head>
 <body>
-    <textarea name="" id="aaaa" cols="30" rows="10">sef
+    <div class="s">
+        <div class="header">Header</div>
 
-
-    </textarea>
-    <div class="ssss">
-      
-        <input type="text"> sfefs
+        <div class="sidebar">Sticky Sidebar </div>
     </div>
+
+    <div class="container">
+        <div class="content">Main content</div>
+    </div>
+
+    <div class="footer">Footer</div>
 </body>
-
-
 </html>
