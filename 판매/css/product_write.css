@@ -46,6 +46,17 @@ input, select {
     width: 100%;
 }
 
+.photos {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    overscroll-behavior-x: hidden;
+}
+
+.photo li {
+    
+}
+
 textarea {
     width:100%;
     resize: none;
