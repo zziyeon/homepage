@@ -89,13 +89,34 @@
 }
 
 /* main 리스트들 */
-.main > .items {
+.main > .ss {
+  display : flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.main > .ss > .item > img {
+  width: 400px;
+}
+.main > .ss > .item > .text_soldout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+u {
+  text-decoration: wavy rgb(210, 25, 25) underline;
+}
+
+/* .main > .items {
   display : flex;
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
   gap: 20px;
-}
+} */
 
 .main > .items > .item {
   display : flex;
