@@ -141,13 +141,16 @@ dl > dt {
 
 /* 상품 정보 */
 .goods_wrap>.goods_info {
-    height: 800px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
 }
 
 /* 지도 */
-.store_location {
+.goods_wrap>.goods_info > .store_location {
     width: 700px;
     height: 640px;
     position: relative;
@@ -165,7 +168,7 @@ dl > dt {
     border-radius: 5px;
 }
 
-.store_location>.custom_zoomcontrol {
+.goods_wrap>.goods_info > .store_location>.custom_zoomcontrol {
     position: absolute;
     top: 80px;
     right: 10px;
@@ -208,4 +211,10 @@ dl > dt {
     border-radius: 8px;
     border: none;
     margin: 0 3px;
+}
+
+
+
+.good_Img {
+    width: 600px;
 }
