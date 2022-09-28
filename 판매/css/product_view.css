@@ -28,10 +28,6 @@
     object-fit: cover;
 }
 
-.product-img>img {
-    
-}
-
 /* 판매 정보(오른쪽) */
 .product-info {
     width: 500px;
@@ -146,7 +142,10 @@ dl > dt {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
 
+.good_Img {
+    width: 600px;
 }
 
 /* 지도 */
@@ -211,10 +210,4 @@ dl > dt {
     border-radius: 8px;
     border: none;
     margin: 0 3px;
-}
-
-
-
-.good_Img {
-    width: 600px;
 }
